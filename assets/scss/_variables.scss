@@ -1,0 +1,202 @@
+// Medias querys
+$breakpoints: (
+  "xs": "(min-width: 0px) and (max-width: 575px)",
+  "sm": "(min-width: 576px) and (max-width: 767px)",
+  "md": "(min-width: 768px) and (max-width: 991px)",
+  "lg": "(min-width: 992px) and (max-width: 1199px)",
+  "xl": "(min-width: 1200px)",
+  "wecan":
+    "(min-width: 1440px) and (max-width: 1440px) and (min-height: 900px) and (max-height:900px)",
+) !default;
+
+// Fonts
+$fontGotham: "Gotham", sans-serif;
+$fontArial: "Arial", sans-serif;
+$fontDin: "DIN Next LT Pro", sans-serif;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$extrabold: 900;
+
+// Colors 
+$white: #fff; 
+$dark: #37424a; 
+
+ :root {
+  --primary-color:#e02934;
+  --secondary-color: #37424a;
+  --bg-body: #fff;
+
+
+  --bg-color: #fff;
+  --text-color: #37424a;
+  --text-colorlight:#424c54;
+  --text-colordark: #e02934;
+  --text-colorbtn: #e02934;
+  --text-colorbtnout: #707070;
+  --bg-color-light: #f4f3f3;
+
+  --text-titlecard: #37424a;
+
+  /* Featured */
+  --homefeatured-item1: #f4f3f3;
+  --homefeatured-item2: #eaeaea;
+  --homefeatured-bg-card:#fff;
+  --bg-listsocial-featured: #fff;
+  --icon-listsocial-featured:  #424c54;
+
+    /* Cards Events */
+    --bg-listsocial-card: #3878c0;
+    --icon-listsocial-card: #fff;
+
+   /* Access */
+    --bg--access: #1a0808;
+
+    /* Footer */
+    --bg-listsocial-footer: #424c54;
+    --icon-listsocial-footer: #fff;
+    
+   
+  --text-titleblue: #3878c0;
+}
+
+[data-theme="dark"] {
+  --primary-color: #181818;
+  --secondary-color: #1f1e1e;
+  --bg-body: #181818;
+  --bg-color: #1f1e1e;
+
+
+  --text-color:#fff;
+  --text-colorlight: #fff;
+  --text-colordark: #fff;
+  --text-colorbtn: #f9f871;
+  --text-colorbtnout: #f9f871;
+
+
+  /* Featured */
+  --homefeatured-item1: #181818;
+  --homefeatured-item2: #1f1e1e;
+  --homefeatured-bg-card:#171616;
+ 
+
+
+  /* Cards Events */
+  --bg-listsocial-card: #fff;
+  --icon-listsocial-card:  #181818;
+
+    /* Access */
+    --bg--access: #1f1e1e;
+
+    /* Footer */
+    --bg-listsocial-footer: #f9f871;
+    --icon-listsocial-footer: #181818;
+
+  --text-titleblue: #fff;
+}
+
+// Utils
+$radius: 5px;
+
+
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/DINNextLTPro-Condensed.woff2') format('woff2'),
+        url('../fonts/DINNextLTPro-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Black.woff2') format('woff2'),
+        url('../fonts/Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/GothamBold.woff2') format('woff2'),
+        url('../fonts/GothamBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/ArialMT.woff2') format('woff2'),
+        url('../fonts/ArialMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Bold.woff2') format('woff2'),
+        url('../fonts/Gotham-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/Arial-BoldMT.woff2') format('woff2'),
+        url('../fonts/Arial-BoldMT.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Medium.woff2') format('woff2'),
+        url('../fonts/Gotham-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/GothamLight.woff2') format('woff2'),
+        url('../fonts/GothamLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('../fonts/Gotham-Book.woff2') format('woff2'),
+        url('../fonts/Gotham-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Ultra';
+    src: url('../fonts/GothamUltra.woff2') format('woff2'),
+        url('../fonts/GothamUltra.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabrito Sans Norm';
+    src: url('../fonts/CabritoSans-NorReg.woff2') format('woff2'),
+        url('../fonts/CabritoSans-NorReg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,226 @@
+@import "variables";
+@import "mixins";
+body{
+  background-color: var(--bg-body);
+}
+
+.navbar{
+  background-color:var(--primary-color);
+  padding-top: 0rem;
+    padding-bottom: 0rem;
+ 
+}
+.nav-link{
+  color: #fff;
+  font-family: $fontGotham;
+  font-weight: $light;
+  font-size: 18px;
+  padding: 0 1.3rem !important;
+
+  position: relative;
+
+  &:after{
+    @include pseudo();
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    bottom: -2rem;
+    left: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  &.active{
+    
+    &:after{
+      @include pseudo();
+      width: 100%;
+      height: 5px;
+      background-color: #fff;
+      bottom: -2rem;
+      left: 0;
+    }
+  }
+  &:hover{
+    color: #fff;
+    &:after{
+      @include pseudo();
+      width: 100%;
+      height: 5px;
+      background-color: #fff;
+      bottom: -2rem;
+      left: 0;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}
+
+.main-socialmedia{
+  position: fixed;
+  content: '';
+  top: 30%;
+  background-color: #4a545b;
+  width: 60px;
+  .main-socialmedia__content{
+    ul{
+      list-style: none;
+      padding-left: 10px;
+      margin-bottom: 0;
+      margin-top: .5rem;
+     
+      li{
+        border-radius: 50%;
+        border: 1px solid #fff;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: .9rem;
+        transition: 0.3s ease-in-out;
+        &:hover{
+          background-color: #37424a;
+          transition: 0.3s ease-in-out;
+        }
+        i{
+          color: #fff;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch {
+    display: inline-block;
+    height: 26px;
+    position: relative;
+    width: 26px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  font-family: 'FontAwesome';
+  bottom: 0px;
+  content: "\f042";
+  height: 26px;
+  left: 5px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: transparent;
+}
+
+input:checked + .slider:before {
+  color: $white;
+}
+
+
+.btn-custom {
+  background-color: var(--text-colorbtn);
+  display: inline-block;
+  font-size: 17px;
+  color: $white;
+  font-weight: $bold;
+  padding: 12px 24px;
+  box-shadow: 0px 8px 10px 0px rgba(var(--text-colorbtn), 0.3);
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+
+  &[type="submit"] {
+    border: 0;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &.light-shadow {
+    box-shadow: 0px 12px 31px 0px rgba(var(--text-colorbtn), 0.25);
+  }
+
+  &.secondary {
+    background-color: var(--secondary-color);
+    box-shadow: 0px 8px 10px 0px rgba(var(--secondary-color), 0.3);
+
+    &.light-shadow {
+      box-shadow: 0px 12px 31px 0px rgba(var(--secondary-color), 0.25);
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    color: var(--text-colorbtn);
+    font-size: 18px;
+    padding: 12px 0px;
+
+    &.outline-dark{
+      background-color: transparent;
+      color: var(--text-colorbtnout);
+      font-size: 18px;
+      &:hover {
+        background-color: transparent;
+        color: var(--text-colorbtnout);
+        opacity: 0.5;
+        transition: all ease-in-out 0.3s;
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: var(--text-colorbtn);
+      opacity: 0.5;
+      transition: all ease-in-out 0.3s;
+    }
+  }
+
+  &.outline-secondary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 18px;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      color: transparent;
+      transition: all ease-in-out 0.3s;
+    }
+  }
+
+  &.extralarge {
+    padding: 20px 50px;
+  }
+
+  &.large {
+    padding: 16px 26px;
+  }
+
+  &.small {
+    font-size: 13px;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+}
