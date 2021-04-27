@@ -175,6 +175,131 @@ img{
   }
 }
 /* commets */
+
+.main-banner {
+  padding: 0;
+  .main-banner__grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    &.grid__three {
+      grid-template-columns: 1.5fr 1fr 1fr;
+    }
+    .main-banner__text{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-end;
+      background-color: white;
+      padding: 0 2rem 0 0;
+  
+      .main-banner__title{
+        text-align: right;
+        h1 {
+          text-transform: uppercase;
+          font-weight: $extrabold;
+          color: $fixed-color-red;
+          font-family: $fontDin;
+          line-height: .9;
+          font-size: 3.5rem;
+  
+        }
+        h2 {
+          text-transform: uppercase;
+          font-weight: $extrabold;
+          color: $fixed-color-dark;
+          font-family: $fontDin;
+          font-size: 3.5rem;
+          line-height: .9;
+        }
+        p{
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 1.6;
+          color: var(--text-colorlight);
+          font-family: $fontGotham;
+          color: $fixed-color-dark;
+        }
+      }
+    }
+    .main-banner__card {
+      width: 80%;
+      .main-banner__cardgrid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        .main-banner__cardimg {
+          width: 100px;
+        }
+        .main-banner__cardtext {
+          display: flex;
+          align-items: center;
+          span  {
+            color:$fixed-color-dark;
+          }
+          strong {
+            color:$fixed-color-dark;
+          }
+        }
+      }
+      .main-banner__cardtime {
+        padding: .5rem 0;
+        border-top: 1px solid $fixed-color-red;
+        border-bottom: 1px solid $fixed-color-red;
+        margin: .5rem 0;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        
+        span{
+          font-weight: 800;
+          &:nth-child(odd) {
+            color: $fixed-color-red;
+          }
+  
+          &:nth-child(even) {
+            color:$fixed-color-dark;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-dots{
+    bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: .5rem;
+    li {
+      height: 8px;
+      width: 15px;
+      margin-right: 1rem;
+      button{
+        height: 8px;
+        width: 8px;
+        background: $dark;
+        opacity: .5;
+        transition: 0.3s ease-in-out;
+        border-radius: 5px;
+        &:before{
+          width: 8px;
+          height: 8px;
+          line-height: 8px;
+          content: '';
+        }
+      }
+      &.slick-active{
+        button{
+          width: 30px;
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+         
+        }
+      }
+
+      
+    }
+  }
+}
 /* Home - About us */
 .main-homeabout {
 

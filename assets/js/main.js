@@ -30,7 +30,7 @@ $(".main-homeevents__content").slick({
 });
 
 
-$(".main-homepost__content").slick({
+$(".main-banner__content, .main-homepost__content").slick({
   arrows: true,
   dots: true,
   infinite: true,

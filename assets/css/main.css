@@ -8,6 +8,7 @@
   --text-colorlight:#424c54;
   --text-colordark: #e02934;
   --text-colorbtn: #e02934;
+  --text-colorbtnbanner: #fff;
   --text-colorbtnout: #707070;
   --bg-color-light: #f4f3f3;
   --text-titlecard: #37424a;
@@ -15,8 +16,8 @@
   --homefeatured-item1: #f4f3f3;
   --homefeatured-item2: #eaeaea;
   --homefeatured-bg-card:#fff;
-  --bg-listsocial-featured: #fff;
-  --icon-listsocial-featured: #424c54;
+  --bg-listsocial-featured: #424c54;
+  --icon-listsocial-featured: #fff;
   /* Cards Events */
   --bg-listsocial-card: #3878c0;
   --icon-listsocial-card: #fff;
@@ -37,6 +38,7 @@
   --text-colorlight: #fff;
   --text-colordark: #fff;
   --text-colorbtn: #f9f871;
+  --text-colorbtnbanner: #f9f871;
   --text-colorbtnout: #f9f871;
   /* Featured */
   --homefeatured-item1: #181818;
@@ -139,6 +141,7 @@
   --text-colorlight:#424c54;
   --text-colordark: #e02934;
   --text-colorbtn: #e02934;
+  --text-colorbtnbanner: #fff;
   --text-colorbtnout: #707070;
   --bg-color-light: #f4f3f3;
   --text-titlecard: #37424a;
@@ -146,8 +149,8 @@
   --homefeatured-item1: #f4f3f3;
   --homefeatured-item2: #eaeaea;
   --homefeatured-bg-card:#fff;
-  --bg-listsocial-featured: #fff;
-  --icon-listsocial-featured: #424c54;
+  --bg-listsocial-featured: #424c54;
+  --icon-listsocial-featured: #fff;
   /* Cards Events */
   --bg-listsocial-card: #3878c0;
   --icon-listsocial-card: #fff;
@@ -168,6 +171,7 @@
   --text-colorlight: #fff;
   --text-colordark: #fff;
   --text-colorbtn: #f9f871;
+  --text-colorbtnbanner: #f9f871;
   --text-colorbtnout: #f9f871;
   /* Featured */
   --homefeatured-item1: #181818;
@@ -392,13 +396,13 @@ input:checked + .slider:before {
 }
 
 .btn-custom {
-  background-color: var(--text-colorbtn);
+  background-color: var(--primary-color);
   display: inline-block;
   font-size: 17px;
-  color: #fff;
+  color: var(--text-colorbtnbanner);
   font-weight: 700;
   padding: 12px 24px;
-  box-shadow: 0px 8px 10px 0px rgba(var(--text-colorbtn), 0.3);
+  box-shadow: 0px 8px 10px 0px rgba(var(--primary-color), 0.3);
   transition: all ease-in-out 0.3s;
   text-decoration: none;
 }
@@ -407,7 +411,7 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 .btn-custom:hover {
-  color: #fff;
+  color: var(--text-colorbtnbanner);
   text-decoration: none;
 }
 .btn-custom.light-shadow {
@@ -475,6 +479,7 @@ input:checked + .slider:before {
   --text-colorlight:#424c54;
   --text-colordark: #e02934;
   --text-colorbtn: #e02934;
+  --text-colorbtnbanner: #fff;
   --text-colorbtnout: #707070;
   --bg-color-light: #f4f3f3;
   --text-titlecard: #37424a;
@@ -482,8 +487,8 @@ input:checked + .slider:before {
   --homefeatured-item1: #f4f3f3;
   --homefeatured-item2: #eaeaea;
   --homefeatured-bg-card:#fff;
-  --bg-listsocial-featured: #fff;
-  --icon-listsocial-featured: #424c54;
+  --bg-listsocial-featured: #424c54;
+  --icon-listsocial-featured: #fff;
   /* Cards Events */
   --bg-listsocial-card: #3878c0;
   --icon-listsocial-card: #fff;
@@ -504,6 +509,7 @@ input:checked + .slider:before {
   --text-colorlight: #fff;
   --text-colordark: #fff;
   --text-colorbtn: #f9f871;
+  --text-colorbtnbanner: #f9f871;
   --text-colorbtnout: #f9f871;
   /* Featured */
   --homefeatured-item1: #181818;
@@ -764,6 +770,120 @@ img {
 }
 
 /* commets */
+.main-banner {
+  padding: 0;
+}
+.main-banner .main-banner__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.main-banner .main-banner__grid.grid__three {
+  grid-template-columns: 1.5fr 1fr 1fr;
+}
+.main-banner .main-banner__grid .main-banner__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: white;
+  padding: 0 2rem 0 0;
+}
+.main-banner .main-banner__grid .main-banner__text .main-banner__title {
+  text-align: right;
+}
+.main-banner .main-banner__grid .main-banner__text .main-banner__title h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #e3450e;
+  font-family: "DIN Next LT Pro", sans-serif;
+  line-height: 0.9;
+  font-size: 3.5rem;
+}
+.main-banner .main-banner__grid .main-banner__text .main-banner__title h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #46525b;
+  font-family: "DIN Next LT Pro", sans-serif;
+  font-size: 3.5rem;
+  line-height: 0.9;
+}
+.main-banner .main-banner__grid .main-banner__text .main-banner__title p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-colorlight);
+  font-family: "Gotham", sans-serif;
+  color: #46525b;
+}
+.main-banner .main-banner__grid .main-banner__card {
+  width: 80%;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardgrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardgrid .main-banner__cardimg {
+  width: 100px;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardgrid .main-banner__cardtext {
+  display: flex;
+  align-items: center;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardgrid .main-banner__cardtext span {
+  color: #46525b;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardgrid .main-banner__cardtext strong {
+  color: #46525b;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardtime {
+  padding: 0.5rem 0;
+  border-top: 1px solid #e3450e;
+  border-bottom: 1px solid #e3450e;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardtime span {
+  font-weight: 800;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardtime span:nth-child(odd) {
+  color: #e3450e;
+}
+.main-banner .main-banner__grid .main-banner__card .main-banner__cardtime span:nth-child(even) {
+  color: #46525b;
+}
+.main-banner .slick-dots {
+  bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+}
+.main-banner .slick-dots li {
+  height: 8px;
+  width: 15px;
+  margin-right: 1rem;
+}
+.main-banner .slick-dots li button {
+  height: 8px;
+  width: 8px;
+  background: #37424a;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.main-banner .slick-dots li button:before {
+  width: 8px;
+  height: 8px;
+  line-height: 8px;
+  content: "";
+}
+.main-banner .slick-dots li.slick-active button {
+  width: 30px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
 /* Home - About us */
 .main-homeabout .main-homeabout__content {
   background-color: var(--primary-color);

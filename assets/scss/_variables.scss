@@ -22,6 +22,8 @@ $extrabold: 900;
 // Colors 
 $white: #fff; 
 $dark: #37424a; 
+$fixed-color-red: #e3450e;
+$fixed-color-dark: #46525b;
 
  :root {
   --primary-color:#e02934;
@@ -34,6 +36,7 @@ $dark: #37424a;
   --text-colorlight:#424c54;
   --text-colordark: #e02934;
   --text-colorbtn: #e02934;
+  --text-colorbtnbanner: #fff;
   --text-colorbtnout: #707070;
   --bg-color-light: #f4f3f3;
 
@@ -43,8 +46,8 @@ $dark: #37424a;
   --homefeatured-item1: #f4f3f3;
   --homefeatured-item2: #eaeaea;
   --homefeatured-bg-card:#fff;
-  --bg-listsocial-featured: #fff;
-  --icon-listsocial-featured:  #424c54;
+  --bg-listsocial-featured: #424c54;
+  --icon-listsocial-featured:  #fff;
 
     /* Cards Events */
     --bg-listsocial-card: #3878c0;
@@ -72,6 +75,7 @@ $dark: #37424a;
   --text-colorlight: #fff;
   --text-colordark: #fff;
   --text-colorbtn: #f9f871;
+  --text-colorbtnbanner: #f9f871;
   --text-colorbtnout: #f9f871;
 
 
