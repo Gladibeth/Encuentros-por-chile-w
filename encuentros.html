@@ -58,7 +58,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="encuentros.html">Encuentros?</a>
+              <a class="nav-link active" aria-current="page" href="#">Encuentros?</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">#Sociedad</a>
@@ -103,9 +103,9 @@
 
     <!-- Banner -->
     <section class="main-banner">
-      <div class="main-banner__content main-banner__slider">
+      <div class="main-banner__content ">
         <div class="main-banner__item">
-          <div class="main-banner__grid">
+          <div class="main-banner__grid grid__three">
             <div class="main-banner__img">
               <img src="assets/img/Home/banner.png" alt="">
             </div>
@@ -133,178 +133,171 @@
                   <span>20 HRS /</span>
                   <span>Youtube live</span>
                 </div>
-                <div class="d-flex justify-content-end mt-4">
-                  <a  class="btn-custom " href="">Inscribete aqui</a>
-                </div>
+              
               </div>
             </div>
-          </div>
-        </div>
-        <div class="main-banner__item">
-          <div class="main-banner__grid">
-            <div class="main-banner__img">
-              <img src="assets/img/Home/banner.png" alt="">
-            </div>
-            <div class="main-banner__text">
-              <div class="main-banner__title">
-                <h1>Nueva: construccion</h1>
-                <h2>Una para todos,todos para una</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora soluta asperiores ipsa quaerat.!</p>
-              </div>
+            <div class="main-form">
+              <div class="main-form__content">
+                <h5 class="main-form__title">
+                  Inscribete aqui
+                </h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">
+                      <div class="main-form__img">
+                        <img src="assets/img/Encuentros/iconos/user.png" alt="">
+                      </div>
+                      Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Ingrese sus datos">
+                  </div>
 
-              <div class="main-banner__card">
-                <div class="main-banner__cardgrid">
-                  <div class="main-banner__cardimg">
-                    <img src="assets/img/Home/card-banner.png" alt="">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">
+                      <div class="main-form__img">
+                        <img src="assets/img/Encuentros/iconos/email.png" alt="">
+                      </div>
+                      Email </label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="tunombre@tuemail.com">
                   </div>
-                  <div class="main-banner__cardtext">
-                    <span>
-                      Presenta: <strong>Daniel Mansuy</strong>
-                      director de SIGNOS
-                    </span>
+
+                  <div class="mb-3">
+                    <label for="name" class="form-label">
+                      <div class="main-form__img">
+                        <img src="assets/img/Encuentros/iconos/company.png" alt="">
+                      </div>
+                      Empresa / institucion</label>
+                    <input type="text" class="form-control" id="nameCompany" placeholder="Nombre">
                   </div>
-                </div>
-                <div class="main-banner__cardtime">
-                  <span>Jueves 6 marzo /</span>
-                  <span>20 HRS /</span>
-                  <span>Youtube live</span>
-                </div>
-                <div class="d-flex justify-content-end mt-4">
-                  <a  class="btn-custom " href="">Inscribete aqui</a>
-                </div>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">
+                      <div class="main-form__img">
+                        <img src="assets/img/Encuentros/iconos/map.png" alt="">
+                      </div>
+                      Pais</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccionar</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-center mt-4">
+                    <a  class="btn-custom btn-form " href="">Inscribir</a>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Btn scroll -->
-      <a href="#main-homeabout" class="main-down">
-        <div class="main-down__scroll">
-          <div class="main-down__rond"></div>
-        </div>    
-        <div class="text-scroll"> 
+    </section>
+
+    <!-- Meeting - About -->
+    <section class="main-meetingabout">
+      <div class="main-meetingabout__content">
+        <div class="main-meetingabout__item">
+          <div class="main-meetingabout__text">
           
-        </div>
-      </a>
-    </section>
-
-    <!-- About us -->
-    <section id="main-homeabout" class="main-homeabout">
-      <div class="main-homeabout__content content-grid2">
-        <div class="main-homeabout__item">
-          <div class="main-homeabout__text">
-            <h1 class="badge__general">
-              ¿Qué es encuentros por chile?
-            </h1>
-            <p class="main-homeabout__description">Podemos ignorar las diferencias y suponer que todas nuestras mentes son iguales, o podemos tomas las diferencias entre ellas.</p>
+            <h2 class="badge__general">Sobre elencuentro</h2>
+          
+            <div class="main-meetingabout__title">
+              <h1>Compartamos visiones abordemos juntos diversos problemas y desafios sociales</h1>
+            </div>
+            <div class="main-meetingabout__description">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio asperiores aliquid minima voluptatibus quod est eligendi veniam sit totam iure. Consectetur sequi error magni incidunt vero expedita aspernatur laudantium. Sapiente.
+              </p>
+              <span>
+                <i class="fa fa-angle-double-down"></i>
+              </span>
+            </div>
           </div>
         </div>
-        <div class="main-homeabout__item">
-          <div class="main-homeabout__text">
-            <p class="main-homeabout__description small">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vel ullam magni, ex atque veritatis pariatur dolorem officiis, ipsam blanditiis rerum est assumenda illum similique ducimus accusamus exercitationem doloribus voluptate. <strong><a href="">justo</a></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente consequuntur neque asperiores odit reiciendis atque sit odio temporibus perferendis, voluptatem earum dolores repudiandae aut culpa voluptates a, possimus reprehenderit.
-            </p>
-            <div class="content-btn d-flex justify-content-end">
-              <a class="btn-custom outline" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Seguir leyendo
-              </a>
+        <div class="main-meetingabout__item">
+          <div class="main-meetingabout__img">
+            <img src="assets/img/Encuentros/ilustracionescribirmensaje.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meeting - Target -->
+    <section class="main-meetingtarget">
+      <div class="main-homepost__general bg__gray">
+        <h1  class="main-title__general title_lightred">Que pueden esperar de este encuentro?</h1>
+        <div class="main-meetingtarget__content">
+          <div class="main-meetingtarget__item">
+            <div class="main-meetingtarget__grid">
+              <div class="main-meetingtarget__img">
+                <img src="assets/img/Encuentros/Target.png" alt="">
+              </div>
+              <div class="main-meetingtarget__text">
+                <h1 class="main-title__small title-small__dark">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                </h1>
+                <div class="main-description__general">
+                  <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
+                </div>
+                <div class="d-flex justify-content-end">
+
+                  <a class="btn-custom outline" href="encuentros-anteriores.html">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Ver encuentros anterior
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-meetingtarget__item">
+            <div class="main-meetingtarget__grid">
+              <div class="main-meetingtarget__img">
+                <img src="assets/img/Encuentros/Target.png" alt="">
+              </div>
+              <div class="main-meetingtarget__text">
+                <h1 class="main-title__small title-small__dark">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                </h1>
+                <div class="main-description__general">
+                  <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
+                </div>
+                <div class="d-flex justify-content-end">
+
+                  <a class="btn-custom outline " href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Ver encuentros anterior
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    
-
-    <!-- Featured -->
-    <section class="main-featured">
-      <div class="main-featured__content">
-        <div class="main-featured__item">
-          <h1  class="main-title__general title_lightred">Destacados</h1>
-          <br>
-          <div class="main-tags__text">
-            <p>#Salud</p>
-          </div>
-          <h1 class="main-title__small">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
-          </h1>
-          <div class="main-description__general">
-            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi saepe a pariatur facilis. In? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugit rerum dolor, tempore delectus quis! Exercitationem, at minima nobis corporis inventore, dolorum accusamus omnis enim sint a accusantium, eaque maiores.</p>
-          </div>
-          <div class="main-author">
-            <strong>Author:</strong>
-            <span>Dores Harmon</span>
-          </div>
-          <a class="btn-custom outline outline-dark" href="">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-            Leer mas
-          </a>
-          <div class="main-shared">
-            <span>Compartir:</span>
-            <ul>
-              <li>
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </li>
-              <li>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </li>
-              <li>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </li>
-              <li>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </li>
-              <li>
-                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="main-featured__item">
-          <div class="main-featured__img">
-            <img src="assets/img/Home/featured.png" alt="">
-          </div>
-        </div>
-      </div>
+      
     </section>
 
     <!-- Featured - Events -->
     <section class="main-homeevents">
-      <h1  class="main-title__general title_lightblue">Eventos Destacados</h1>
-      <div class="main-homeevents__content">
+      <h1  class="main-title__general title_lightred">Speakers Confirmados</h1>
+      <div class="main-homeevents__content not_dots">
         <div class="main-homeevents__item">
           <div class="main-homeevents__card">
             <div class="main-homeevents__img"> 
               <img src="assets/img/Home/card.png" alt="">
             </div>
             <div class="main-homeevents__text">
-              <h2>Lorem ipsum dolor</h2>
-              <div class="main-description__general">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+              <h2>Carlos Avila</h2>
+              <div class="main-description__general description__red">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium.</p>
               </div>
-              <a class="btn-custom outline outline-dark" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Leer mas
-              </a>
-
               <div class="main-shared">
-                <span>Compartir</span>
                 <ul>
-                  <li class="list__blue">
+                  <li>
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
+                  <li>
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -317,32 +310,19 @@
             </div>
             <div class="main-homeevents__text">
               <h2>Lorem ipsum dolor</h2>
-              <div class="main-description__general">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+              <div class="main-description__general description__red">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium.</p>
               </div>
-              <a class="btn-custom outline outline-dark" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Leer mas
-              </a>
 
               <div class="main-shared">
-                <span>Compartir</span>
                 <ul>
-                  <li class="list__blue">
+                  <li>
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
+                  <li>
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -355,32 +335,19 @@
             </div>
             <div class="main-homeevents__text">
               <h2>Lorem ipsum dolor</h2>
-              <div class="main-description__general">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+              <div class="main-description__general description__red">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium.</p>
               </div>
-              <a class="btn-custom outline outline-dark" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Leer mas
-              </a>
 
               <div class="main-shared">
-                <span>Compartir</span>
                 <ul>
-                  <li class="list__blue">
+                  <li>
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
+                  <li>
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -393,31 +360,105 @@
             </div>
             <div class="main-homeevents__text">
               <h2>Lorem ipsum dolor</h2>
-              <div class="main-description__general">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+              <div class="main-description__general description__red">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium.</p>
               </div>
-              <a class="btn-custom outline outline-dark" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Leer mas
-              </a>
 
               <div class="main-shared">
-                <span>Compartir</span>
                 <ul>
-                  <li class="list__blue">
+                  <li>
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
+                  <li>
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meeting - Programs -->
+    <section class="main-meetingprograms">
+      <div class="main-meetingprograms__content content-grid2">
+        <div class="main-meetingprograms__item">
+          <div class="main-meetingprograms__text">
+            <h1  class="main-title__general title_lightwhite">Programas</h1>
+            <div class="main-description__general description__white">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium.</p>
+            </div>
+          </div>
+          <div class="main-meetingprograms__img">
+            <img src="assets/img/Encuentros/ilustracionmensaje.svg" alt="">
+          </div>
+        </div>
+        <div class="main-meetingprograms__item">
+          <div class="main-cardprogram">
+            <div class="main-cardprogram__content">
+              <div class="main-cardprogram__text">
+                <p class="badge__general badge__large">Dia 1</p>
+                <h2>Lorem ipsum dolor sit</h2>
+                <ul>
+                  <li>                
+                    <span>
+                      <strong>Lorem ipsum dolor sit amet:</strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
                   </li>
-                  <li class="list__blue">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                  <li>                
+                    <span>
+                      <strong>Lorem ipsum dolor sit amet:</strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                  </li>
+                  <li>                
+                    <span>
+                      <strong>Lorem ipsum dolor sit amet:</strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                  </li>
+                  <li>                
+                    <span>
+                      <strong>Lorem ipsum dolor sit amet:</strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main-cardprogram">
+            <div class="main-cardprogram__content">
+              <div class="main-cardprogram__text">
+                <p class="badge__general badge__large">Dia 2</p>
+                <h2>Lorem ipsum dolor sit</h2>
+                <ul>
+                  <li>                
+                    <span>
+                      <strong>Lorem ipsum dolor sit amet:</strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                  </li>
+                  <li>                
+                    <span>
+                      <strong>Lorem ipsum dolor sit amet:</strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                  </li>
+                  <li>                
+                    <span>
+                      <strong>Lorem ipsum dolor sit amet:</strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                  </li>
+                  <li>                
+                    <span>
+                      <strong>Lorem ipsum dolor sit amet:</strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
                   </li>
                 </ul>
               </div>

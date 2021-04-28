@@ -25,6 +25,10 @@ img{
   &.title_lightblue{
     color: var( --text-titleblue);
   }
+  &.title_lightwhite{
+    color: $white;
+    font-size: 38px;
+  }
 }
 
 .main-title__small{
@@ -42,11 +46,31 @@ img{
 
 .main-description__general{
   p{
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1.6;
     color: var(--text-colorlight);
     font-family: $fontGotham;
+  }
+
+  &.description__red {
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--text-colordark);
+      font-family: $fontGotham;
+    }
+  }
+
+  &.description__white {
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: $white;
+      font-family: $fontGotham;
+    }
   }
 }
 
@@ -168,6 +192,25 @@ img{
     color: var(--text-color);
   }
 }
+
+.badge__general {
+  text-transform: uppercase;
+  font-size: 20px;
+  display: inline-block;
+  padding: .35em .65em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0;
+  background-color: var(--secondary-color);
+
+  &.badge__large {
+    font-size: 28px;
+  }
+}
 .main-line{
   padding: 0 3rem;
   hr:not([size]) {
@@ -178,12 +221,32 @@ img{
 
 .main-banner {
   padding: 0;
+  position: relative;
+  overflow: hidden;
   .main-banner__grid{
     display: grid;
     grid-template-columns: 2fr 1fr;
 
     &.grid__three {
       grid-template-columns: 1.5fr 1fr 1fr;
+
+      .main-banner__text {
+
+        .main-banner__title {
+          h1, h2 {
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+      .main-banner__cardtime {
+        span {
+          font-size: .8rem;
+        }
+      }
+
     }
     .main-banner__text{
       display: flex;
@@ -268,7 +331,7 @@ img{
     bottom: 2rem;
     display: flex;
     justify-content: flex-end;
-    padding-right: .5rem;
+    padding-right: .9rem;
     li {
       height: 8px;
       width: 15px;
@@ -372,21 +435,48 @@ img{
 .main-featured{
   .main-featured__content{
     background-color: var(--homefeatured-item1);
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
     .main-featured__item{
-      &:nth-child(1){
-       
-        padding: 4rem 4rem 4rem 6rem;
-        background: transparent;
+      &:nth-child(1){       
+        padding: 3rem 0rem 3rem 6rem;
+        width: 80%;
        
       }
       &:nth-child(2){
         background-color: var(--homefeatured-item2);
         display: flex;
         align-items: center;  
-        padding: 2rem;
+        padding: 0 2rem 0 0;
         position: relative;
         &:before{
+          top: 0;
+          position: absolute;
+          content: "";
+          width: 300px;
+          height: 350px;
+          left: -19rem;
+          border-top: solid 175px #eaeaea;
+          border-right: solid 175px #eaeaea;
+          border-left: solid 175px transparent;
+          border-bottom: solid 175px transparent;
+        }
+        &:after {
+          bottom: 0;
+          position: absolute;
+          content: "";
+          width: 300px;
+          height: 350px;
+          left: -19rem;
+          border-bottom: solid 175px #eaeaea;
+          border-right: solid 175px #eaeaea;
+          border-left: solid 175px transparent;
+          border-top: solid 175px transparent;
+          z-index: 0;
           
+        }
+        .main-featured__img {
+          z-index: 1;
         }
         
       }
@@ -413,6 +503,7 @@ img{
       padding-right: 2.5rem;
       .main-homeevents__img{
         height: 225px;
+        padding: var(--card-paddings);
         img{
           object-fit: cover;
           height: 100%;
@@ -482,10 +573,20 @@ img{
       }
       
     }
+
+    &.not_dots{
+      .slick-dots {
+        display: none !important;
+      }
+     
+    }
+   
   }
   .main-homeevents__text {
     padding-top: 2rem;
     background-color: var(--homefeatured-bg-card);
+    padding: var(--card-paddings);
+    padding-bottom: 2rem;
     h2{
       color: var(--text-color);
       font-size: 20px;
@@ -494,10 +595,16 @@ img{
       font-family: $fontGotham;
     }
   }
+
+  
 }
 .main-homepost__general {
   background-color: var(--bg-color);
   padding: 4rem 6rem;
+
+  &.bg__gray {
+    background-color: var(--homefeatured-item1);
+  }
   @include respond-to(xs){
     padding: 2rem;
    }

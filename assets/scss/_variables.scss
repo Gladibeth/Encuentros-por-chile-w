@@ -24,23 +24,27 @@ $white: #fff;
 $dark: #37424a; 
 $fixed-color-red: #e3450e;
 $fixed-color-dark: #46525b;
+$black: #000;
 
  :root {
   --primary-color:#e02934;
   --secondary-color: #37424a;
   --bg-body: #fff;
-
-
   --bg-color: #fff;
   --text-color: #37424a;
+
   --text-colorlight:#424c54;
   --text-colordark: #e02934;
+
   --text-colorbtn: #e02934;
   --text-colorbtnbanner: #fff;
+
   --text-colorbtnout: #707070;
   --bg-color-light: #f4f3f3;
 
   --text-titlecard: #37424a;
+  --text-titleblue: #3878c0;
+
 
   /* Featured */
   --homefeatured-item1: #f4f3f3;
@@ -48,20 +52,26 @@ $fixed-color-dark: #46525b;
   --homefeatured-bg-card:#fff;
   --bg-listsocial-featured: #424c54;
   --icon-listsocial-featured:  #fff;
-
     /* Cards Events */
+  
     --bg-listsocial-card: #3878c0;
     --icon-listsocial-card: #fff;
-
    /* Access */
     --bg--access: #1a0808;
-
     /* Footer */
     --bg-listsocial-footer: #424c54;
     --icon-listsocial-footer: #fff;
-    
+    /* Btn form */
+    --text-form: #e02934;
+    --bg-form: #fff;
+    --bg-border-form: transparent;
+    --bg-forms:  #37424a;
+    --text-placeholder: #707070;
+    /* about meeting */
+    --bg-meetingabout: #e02934;
    
-  --text-titleblue: #3878c0;
+
+    --card-paddings: 2rem 0rem 0rem  0rem;
 }
 
 [data-theme="dark"] {
@@ -77,13 +87,13 @@ $fixed-color-dark: #46525b;
   --text-colorbtn: #f9f871;
   --text-colorbtnbanner: #f9f871;
   --text-colorbtnout: #f9f871;
-
+  --text-titleblue: #fff;
 
   /* Featured */
+  --text-titlecard: #fff;
   --homefeatured-item1: #181818;
   --homefeatured-item2: #1f1e1e;
   --homefeatured-bg-card:#171616;
- 
 
 
   /* Cards Events */
@@ -97,8 +107,19 @@ $fixed-color-dark: #46525b;
     --bg-listsocial-footer: #f9f871;
     --icon-listsocial-footer: #181818;
 
-  --text-titleblue: #fff;
+    /* Btn form */
+    --text-form: #f9f871;
+    --bg-form: transparent;
+    --bg-border-form: #f9f871;
+    --bg-forms:  #181818;
+    --text-placeholder: #fff;
+
+    /* about meeting */
+    --bg-meetingabout: #1f1e1e;
+
+    --card-paddings: 2rem 2rem 0  2rem;
 }
+
 
 // Utils
 $radius: 5px;
