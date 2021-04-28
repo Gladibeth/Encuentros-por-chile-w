@@ -2,6 +2,19 @@
 @import "mixins";
 
 
+.main-video {
+  display: flex;
+  justify-content: center;
+
+}
+.main-tabs__flex {
+  display: flex;
+  justify-content: space-between;
+}
+.main-paddings{
+  padding: 4rem 8rem;
+}
+
 /* Meeting - About */
 .main-meetingabout__content{
   display: grid;
@@ -179,7 +192,7 @@
       font-weight: 300;
       color: var(--text-colordark);
       margin: 1.5rem 0;
-      color: var(--text-color)
+
     }
     ul {
       list-style: none;
@@ -216,6 +229,8 @@
 
 .mini-banner__content {
   background-color: var(--homefeatured-item1);
+
+ 
 
   .mini-banner__grid {
     display: grid;
@@ -265,39 +280,54 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem 3rem;
   padding: 6rem;
-  .main-cardtabs{
-    background-color: var(--homefeatured-item1);
-    position: relative;
-    padding: 3rem;
-    z-index: 1;
-    &:before{
-      top: 0;
-      position: absolute;
-      content: "";
-      width: 100px;
-      height: 100px;
-      right: 0;
-      border-top: solid 160px var(--homefeatured-item2);
-      border-right: solid 160px var(--homefeatured-item2);
-      border-left: solid 160px transparent;
-      border-bottom: solid 160px transparent;
-      z-index: -1;
+
+  .main-cardtabs__bg{
+    background: var(--primary-color);
+    .main-cardtabs{
+      background-color: var(--homefeatured-item1);
+      position: relative;
+      padding: 3rem;
+      z-index: 1;
+      transition: 0.3s ease-in-out;
+    /*   border-right: 8px solid var(--bg-form);
+      border-bottom: 8px solid var(--bg-form);
+      transition: 0.3s ease-in-out; */
+      &:before{
+        top: 0;
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 100px;
+        right: 0;
+        border-top: solid 160px var(--homefeatured-item2);
+        border-right: solid 160px var(--homefeatured-item2);
+        border-left: solid 160px transparent;
+        border-bottom: solid 160px transparent;
+        z-index: -1;
+      }
+      &:after {
+        bottom: 0;
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 100px;
+        right: 0;
+        border-bottom: solid 160px var(--homefeatured-item2);
+        border-right: solid 160px var(--homefeatured-item2);
+        border-left: solid 160px transparent;
+        border-top: solid 160px transparent;
+        z-index: -1;
+        
+      }
+
+      &:hover {
+         
+         transform: translate(-15px, -15px);
+         transition: 0.3s ease-in-out;
+       }
     }
-    &:after {
-      bottom: 0;
-      position: absolute;
-      content: "";
-      width: 100px;
-      height: 100px;
-      right: 0;
-      border-bottom: solid 160px var(--homefeatured-item2);
-      border-right: solid 160px var(--homefeatured-item2);
-      border-left: solid 160px transparent;
-      border-top: solid 160px transparent;
-      z-index: -1;
-      
-    }
-  }
+
+  } 
 }
 
 .main-tabs__primary {
@@ -369,5 +399,78 @@
       }
     }
     
+  }
+}
+
+
+.main-records {
+  margin-top: 2rem;
+
+  .main-records__content {
+    background-color: var(--homefeatured-item1);
+
+    .main-records__item {
+      &:nth-child(1) {
+        padding: 3rem;
+      }
+      &:nth-child(2) {
+        background-color: var(--homefeatured-item2);
+        position: relative;
+        padding: 5rem 3rem 3rem 3rem;
+        &:before{
+          top: 0;
+          position: absolute;
+          content: "";
+          width: 100px;
+          height: 100px;
+          left: -9rem;
+          border-top: solid 75px #eaeaea;
+          border-right: solid 75px #eaeaea;
+          border-left: solid 75px transparent;
+          border-bottom: solid 75px transparent;
+        }
+        &:after {
+          bottom: 0;
+          position: absolute;
+          content: "";
+          width: 100px;
+          height: 100px;
+          left: -9rem;
+          border-bottom: solid 75px #eaeaea;
+          border-right: solid 75px #eaeaea;
+          border-left: solid 75px transparent;
+          border-top: solid 75px transparent;
+          z-index: 0;
+          
+        }
+      }
+    }
+  }
+}
+
+.main-recordscard {
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.main-speakers__description {
+  ul {
+    li {
+      position: relative;
+      list-style: none;
+      margin-bottom: .5rem;
+      &::before {
+        position: absolute;
+        content: "";
+        font-family: "FontAwesome";
+        color: var(--text-colordark);
+        margin-right: 1rem;
+        left: -1rem;
+        font-size: 25px;
+        top: -0.9rem;
+      }
+    }
   }
 }

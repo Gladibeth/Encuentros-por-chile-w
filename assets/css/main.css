@@ -34,7 +34,7 @@
   --bg-forms: #37424a;
   --text-placeholder: #707070;
   /* about meeting */
-  --bg-meetingabout: #e02934;
+  --bg-meetingabout: #cb3f2c;
   --card-paddings: 2rem 0rem 0rem 0rem;
 }
 
@@ -186,7 +186,7 @@
   --bg-forms: #37424a;
   --text-placeholder: #707070;
   /* about meeting */
-  --bg-meetingabout: #e02934;
+  --bg-meetingabout: #cb3f2c;
   --card-paddings: 2rem 0rem 0rem 0rem;
 }
 
@@ -645,7 +645,7 @@ input:checked + .slider:before {
   --bg-forms: #37424a;
   --text-placeholder: #707070;
   /* about meeting */
-  --bg-meetingabout: #e02934;
+  --bg-meetingabout: #cb3f2c;
   --card-paddings: 2rem 0rem 0rem 0rem;
 }
 
@@ -1496,7 +1496,7 @@ footer {
   --bg-forms: #37424a;
   --text-placeholder: #707070;
   /* about meeting */
-  --bg-meetingabout: #e02934;
+  --bg-meetingabout: #cb3f2c;
   --card-paddings: 2rem 0rem 0rem 0rem;
 }
 
@@ -1613,6 +1613,20 @@ footer {
   font-style: normal;
   font-display: swap;
 }
+.main-video {
+  display: flex;
+  justify-content: center;
+}
+
+.main-tabs__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-paddings {
+  padding: 4rem 8rem;
+}
+
 /* Meeting - About */
 .main-meetingabout__content {
   display: grid;
@@ -1759,7 +1773,6 @@ footer {
   font-weight: 300;
   color: var(--text-colordark);
   margin: 1.5rem 0;
-  color: var(--text-color);
 }
 .main-cardprogram .main-cardprogram__text ul {
   list-style: none;
@@ -1837,13 +1850,20 @@ footer {
   grid-gap: 3rem 3rem;
   padding: 6rem;
 }
-.main-tabs__grid .main-cardtabs {
+.main-tabs__grid .main-cardtabs__bg {
+  background: var(--primary-color);
+}
+.main-tabs__grid .main-cardtabs__bg .main-cardtabs {
   background-color: var(--homefeatured-item1);
   position: relative;
   padding: 3rem;
   z-index: 1;
+  transition: 0.3s ease-in-out;
+  /*   border-right: 8px solid var(--bg-form);
+    border-bottom: 8px solid var(--bg-form);
+    transition: 0.3s ease-in-out; */
 }
-.main-tabs__grid .main-cardtabs:before {
+.main-tabs__grid .main-cardtabs__bg .main-cardtabs:before {
   top: 0;
   position: absolute;
   content: "";
@@ -1856,7 +1876,7 @@ footer {
   border-bottom: solid 160px transparent;
   z-index: -1;
 }
-.main-tabs__grid .main-cardtabs:after {
+.main-tabs__grid .main-cardtabs__bg .main-cardtabs:after {
   bottom: 0;
   position: absolute;
   content: "";
@@ -1868,6 +1888,10 @@ footer {
   border-left: solid 160px transparent;
   border-top: solid 160px transparent;
   z-index: -1;
+}
+.main-tabs__grid .main-cardtabs__bg .main-cardtabs:hover {
+  transform: translate(-15px, -15px);
+  transition: 0.3s ease-in-out;
 }
 
 .main-tabs__primary {
@@ -1930,6 +1954,67 @@ footer {
   border: none;
   background: transparent;
   color: #37424a;
+}
+
+.main-records {
+  margin-top: 2rem;
+}
+.main-records .main-records__content {
+  background-color: var(--homefeatured-item1);
+}
+.main-records .main-records__content .main-records__item:nth-child(1) {
+  padding: 3rem;
+}
+.main-records .main-records__content .main-records__item:nth-child(2) {
+  background-color: var(--homefeatured-item2);
+  position: relative;
+  padding: 5rem 3rem 3rem 3rem;
+}
+.main-records .main-records__content .main-records__item:nth-child(2):before {
+  top: 0;
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  left: -9rem;
+  border-top: solid 75px #eaeaea;
+  border-right: solid 75px #eaeaea;
+  border-left: solid 75px transparent;
+  border-bottom: solid 75px transparent;
+}
+.main-records .main-records__content .main-records__item:nth-child(2):after {
+  bottom: 0;
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  left: -9rem;
+  border-bottom: solid 75px #eaeaea;
+  border-right: solid 75px #eaeaea;
+  border-left: solid 75px transparent;
+  border-top: solid 75px transparent;
+  z-index: 0;
+}
+
+.main-recordscard ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.main-speakers__description ul li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+.main-speakers__description ul li::before {
+  position: absolute;
+  content: "";
+  font-family: "FontAwesome";
+  color: var(--text-colordark);
+  margin-right: 1rem;
+  left: -1rem;
+  font-size: 25px;
+  top: -0.9rem;
 }
 
 /*# sourceMappingURL=main.css.map */
