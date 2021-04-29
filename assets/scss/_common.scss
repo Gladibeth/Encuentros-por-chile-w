@@ -247,6 +247,12 @@ input:checked + .slider:before {
       opacity: 0.5;
       transition: all ease-in-out 0.3s;
     }
+
+    &.underline-red {
+      font-weight: 300;
+      text-decoration: underline;
+      padding: 0;
+    }
   }
 
   &.outline-secondary {

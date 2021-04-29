@@ -1,0 +1,134 @@
+@import "variables";
+@import "mixins";
+
+.main-single__flex{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    @include respond-to(xs) {
+      padding: 0;
+    }
+    
+    .main-single__content {
+      width: 60%;
+      @include respond-to(xs) {
+        width: 100%;
+      }
+      .main-single__title {
+        padding: 3rem;
+
+        @include respond-to(xs) {
+          padding: 2rem 1rem;
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 30px;
+          font-family: "Gotham", sans-serif;
+          font-weight: 300;
+          color: var(--text-colordark);
+
+
+        @include respond-to(xs) {
+          font-size: 22px;
+          
+        }
+
+        }
+        .main-single__author {
+          span{
+            color: #171616;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.6;
+            font-family: $fontGotham;
+          }
+        }
+      }
+
+      .main-single__text {
+        padding: 3rem;
+        
+        @include respond-to(xs) {
+          padding: 2rem 1rem;
+        }
+
+        .main-single__description {
+          padding-top: 2rem;
+
+          @include respond-to(xs) {
+            padding: 0;
+          }
+          p,a {
+            color: #171616;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.6;
+            font-family: $fontGotham;
+          }
+          strong {
+            color: #171616;
+            font-size: 17px;
+          }
+          cite {
+          
+            padding: .5rem;
+
+            @include respond-to(xs) {
+              padding: 0;
+            }
+            p {
+              position: relative;
+              color: var(--primary-color);
+              font-size: 25px;
+              padding-right: 8rem;
+              font-weight: 400;
+
+              @include respond-to(xs) {
+                font-size: 17px;
+                padding-right: 0rem;
+              }
+              &:after {
+                position: absolute;
+                content: '';
+                right: 0;
+                top: 0;
+                width: 100px;
+                background-image: url('../img/Single/flechas.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100px;
+
+                @include respond-to(xs) {
+                  display: none;
+                }
+  
+              }
+            }
+
+          }
+        }
+      }
+    }
+}
+
+.main-single__date {
+  display: flex;
+  align-items: center;
+  .main-single__dateimg {
+    width: 30px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  span {
+    color: #707070;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: $fontGotham;
+  }
+}

@@ -1,4 +1,4 @@
-$(".main-homeevents__content").slick({
+$(".main-slider3").slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -10,6 +10,36 @@ $(".main-homeevents__content").slick({
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+$(".main-slider2").slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
     },
     {
@@ -62,3 +92,5 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+
