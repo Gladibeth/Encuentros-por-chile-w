@@ -82,6 +82,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1.5fr;
   grid-gap: 2rem;
+  @include respond-to(xs) {
+    grid-gap: 1rem;
+  }
+
+  @include respond-to(sm) {
+    grid-gap: 1rem;
+  }
 
   @include respond-to(md) {
     grid-template-columns: 1fr 1fr;
@@ -91,11 +98,11 @@
     background-color:var(--bg-body);
 
     @include respond-to(xs) {
-      padding: 2rem;
+      padding:1rem;
     }
 
     @include respond-to(sm) {
-      padding: 2rem;
+      padding:1rem;
     }
     @include respond-to(md) {
       padding: 2rem;

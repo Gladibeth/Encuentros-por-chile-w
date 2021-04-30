@@ -152,10 +152,10 @@
   background-color: var(--homefeatured-item2);
   padding: 2rem 0 0rem 4rem;
   @include respond-to(xs) {
-    padding: 2rem 0 0rem 2rem;
+    padding: 2rem 1rem 0rem 1rem;
   }
   @include respond-to(sm) {
-    padding: 2rem 0 0rem 2rem;
+    padding: 2rem 1rem 0rem 1rem;
   }
   @include respond-to(md) {
     padding: 0rem 0 0rem 2rem;
@@ -237,5 +237,17 @@
     @include respond-to(sm) {
       padding: 0;
     }
+  }
+}
+
+.main-navigation__visible {
+  display: none;
+  @include respond-to(xs) {
+    display: flex;
+    justify-content: center;
+  }
+  @include respond-to(sm) {
+    display: flex;
+    justify-content: center;
   }
 }

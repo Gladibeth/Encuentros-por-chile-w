@@ -472,8 +472,9 @@
     <section class="main-docs">
       <div class="main-docs__content">
         <div class="main-tabs__primary paddings not-border main-tabs__flex">
-          <h1  class="main-title__general title_dark ">Documentos</h1>
-          <ul class="nav nav-pills  " id="pills-tab" role="tablist">
+          <h1  class="main-title__general title_dark d-none d-md-block ">Documentos</h1>
+          <p class="d-md-none text-center">Filtrar por tipo de descargable</p>
+          <ul class="nav nav-pills d-none d-md-block " id="pills-tab" role="tablist">
             <li class="nav-item nav-item__docs" role="presentation">
               <button class="nav-link active" id="pills-home1-tab" data-bs-toggle="pill" data-bs-target="#pills-home1" type="button" role="tab" aria-controls="pills-home1" aria-selected="true">Nueva constitucion</button>
             </li>
@@ -483,9 +484,19 @@
             <li class="nav-item nav-item__docs" role="presentation">
               <button class="nav-link" id="pills-contact1-tab" data-bs-toggle="pill" data-bs-target="#pills-contact1" type="button" role="tab" aria-controls="pills-contact1" aria-selected="false">Sociedad de economia</button>
             </li>
-            
           </ul>
-         
+
+          <div class="main-navigation__visible">
+
+            <div class="tab-navigation ">              
+              <select id="select-box">
+                <option value="home1">Documentos</option>
+                <option value="profile1">Nueva constitucion</option>
+                <option value="contact1">Sociedad de economia</option>
+                
+              </select>
+            </div>
+          </div>
         </div>
 
         <div class="tab-content" id="pills-tabContent">
@@ -1129,5 +1140,38 @@
 <script src='assets/js/slick.min.js'></script>
 <script src='assets/js/wow.min.js'></script>
 <script src='assets/js/main.js'></script>
+
+<script>
+
+
+$(document).ready(function(){
+  var width = window.innerWidth;
+  var resolucion = $( window ).width();
+
+  if(resolucion <= 767){
+     //hide all tabs first
+    $('.tab-pane').hide();
+    //show the first tab content
+    $('#pills-home1').show();
+    
+    $('#select-box').change(function () {
+      dropdown = $('#select-box').val();
+      //first hide all tabs again when a new option is selected
+      $('.tab-pane').hide();
+      //then show the tab content of whatever option value was selected
+      $('#' + "pills-" + dropdown).addClass('active show').show();                                    
+    });
+  }
+  else{
+      console.log("Si cargo include o cargo template grande");
+      cargarInclude = 1;
+  }
+});
+
+
+
+
+
+</script>
 </body>
 </html>

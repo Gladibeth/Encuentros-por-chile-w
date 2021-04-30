@@ -103,7 +103,7 @@ $(document).ready(function(){
   if(resolucion <= 767){
     $('.main-btn__offcanvas button').click(function(){
       $('.nav-pills').toggleClass('active_ul');
-      
+      $('.nav-link').removeClass('active_ul')
     })
     $('.nav-link').click(function(){
       $('.nav-pills').removeClass('active_ul');
@@ -115,4 +115,7 @@ $(document).ready(function(){
       cargarInclude = 1;
   }
 });
+
+
+
 
