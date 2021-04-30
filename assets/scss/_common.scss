@@ -37,6 +37,9 @@ body{
     @include respond-to(md) {
       width: 100%;
     }
+    @include respond-to(lg) {
+      width: 125px;
+    }
   }
 }
 
@@ -79,14 +82,17 @@ body{
     position: relative;
 
     @include respond-to(xs) {
-      padding: 0  !important;
+      padding: 0rem  !important;
     }
     
     @include respond-to(sm) {
-      padding: 0  !important;
+      padding: 0rem  !important;
     }
     @include respond-to(md) {
-      padding: 0  !important;
+      padding: 0rem  !important;
+    }
+    @include respond-to(lg) {
+      padding: 0.6rem !important;
     }
     &:after{
       @include pseudo();
