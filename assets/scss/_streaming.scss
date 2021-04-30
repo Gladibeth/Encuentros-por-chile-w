@@ -6,17 +6,43 @@
 .main-records {
   margin-top: 2rem;
 
+  @include respond-to(lg) {
+    margin-top: 0;
+  }
+
   .main-records__content {
     background-color: var(--homefeatured-item1);
 
     .main-records__item {
       &:nth-child(1) {
         padding: 3rem 6rem;
+        @include respond-to(xs) {
+          padding: 3rem 2rem 0 2rem;
+        }
+        @include respond-to(sm) {
+          padding: 3rem 2rem 0 2rem;
+        }
+        @include respond-to(md) {
+          padding: 3rem 2rem;
+        }
+        @include respond-to(lg) {
+          padding: 3rem 2rem;
+        }
+        
       }
       &:nth-child(2) {
         background-color: var(--homefeatured-item2);
         position: relative;
         padding: 5rem 3rem 3rem 3rem;
+
+        @include respond-to(xs) {
+          padding: 0rem 2rem 2rem 2rem;
+          background-color: transparent;
+        }
+        @include respond-to(sm) {
+          padding: 0rem 2rem 2rem 2rem;
+          background-color: transparent;
+        }
         &:before{
           top: 0;
           position: absolute;
@@ -28,6 +54,16 @@
           border-right: solid 75px  var(--homefeatured-item2);
           border-left: solid 75px transparent;
           border-bottom: solid 75px transparent;
+
+          @include respond-to(xs) {
+            display: none;
+          }
+          @include respond-to(sm) {
+            display: none;
+          }
+          @include respond-to(md) {
+            left: -8rem;
+          }
         }
         &:after {
           bottom: 0;
@@ -41,6 +77,16 @@
           border-left: solid 75px transparent;
           border-top: solid 75px transparent;
           z-index: 0;
+
+          @include respond-to(xs) {
+            display: none;
+          }
+          @include respond-to(sm) {
+            display: none;
+          }
+          @include respond-to(md) {
+            left: -8rem;
+          }
           
         }
       }
@@ -105,6 +151,18 @@
 .main-docs {
   background-color: var(--homefeatured-item2);
   padding: 2rem 0 0rem 4rem;
+  @include respond-to(xs) {
+    padding: 2rem 0 0rem 2rem;
+  }
+  @include respond-to(sm) {
+    padding: 2rem 0 0rem 2rem;
+  }
+  @include respond-to(md) {
+    padding: 0rem 0 0rem 2rem;
+  }
+  @include respond-to(lg) {
+    padding: 2rem 0 0rem 2rem;
+  }
   
 }
 .main-carddocs {
@@ -114,6 +172,18 @@
     border: 2px solid var(--text-colordark);
     height: 200px;
     padding: 2rem;
+    @include respond-to(xs) {
+      height: 250px;
+    }
+    @include respond-to(sm) {
+      height: 250px;
+    }
+    @include respond-to(md) {
+      height: 250px;
+    }
+    @include respond-to(lg) {
+      height: 250px;
+    }
     .main-carddocs__img {
       width: 140px;
       margin-right: 1rem;
@@ -143,7 +213,29 @@
   }
 }
 
-
+.main-participated {
+  @include respond-to(xs){
+    padding: 0;
+  }
+  @include respond-to(sm){
+    padding: 0;
+  }
+}
 .main-participated__text {
   padding: 4rem 4rem 4rem 0;
+
+  @include respond-to(xs){
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+
+.main-participated__row {
+  .col-12 {
+    @include respond-to(xs) {
+      padding: 0;
+    }
+    @include respond-to(sm) {
+      padding: 0;
+    }
+  }
 }

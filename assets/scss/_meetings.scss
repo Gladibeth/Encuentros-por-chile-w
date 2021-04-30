@@ -35,9 +35,37 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @include respond-to(xs) {
+    flex-direction: column;
+    align-items: unset;
+  }
+  @include respond-to(sm) {
+    flex-direction: column;
+    align-items: unset;
+  }
 }
 .main-paddings{
   padding: 4rem 8rem;
+
+  @include respond-to(xs) {
+    padding: 2rem 2rem 0 2rem;
+  }
+  @include respond-to(sm) {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+
+
+  @include respond-to(md) {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  @include respond-to(lg) {
+    padding: 2rem 3rem 0 3rem;
+  }
+
+  
 }
 
 /* Meeting - About */
@@ -720,6 +748,16 @@
   &.paddings {
     padding: 0 4rem;
     margin-bottom: 2rem;
+    @include respond-to(xs) {
+      padding: 2rem 0 0 0;
+    }
+    @include respond-to(md) {
+      padding: 0rem;
+    }
+    
+    @include respond-to(lg) {
+      padding: 0 2rem;
+    }
   }
 
   .nav-pills {
@@ -738,6 +776,10 @@
       padding: 4rem 2rem 0 2rem;
     }
     @include respond-to(md) {
+      padding: 4rem 2rem 0 2rem;
+    }
+
+    @include respond-to(lg) {
       padding: 4rem 2rem 0 2rem;
     }
     &.active_ul {

@@ -24,6 +24,20 @@ body{
   @include respond-to(sm) {
     width: 180px;
   }
+
+  img {
+    width: 150px;
+
+    @include respond-to(xs) {
+      width: 100%;
+    }
+    @include respond-to(sm) {
+      width: 100%;
+    }
+    @include respond-to(md) {
+      width: 100%;
+    }
+  }
 }
 
 .navbar-search {
@@ -48,8 +62,13 @@ body{
   @include respond-to(sm) {
     padding-bottom: 1.5rem;
   }
+  @include respond-to(md) {
+    padding-bottom: 1.5rem;
+  }
   &:nth-child(1) {
-    padding-top: 1rem;
+    @include respond-to(xs) {
+      padding-top: 1rem;
+    }
   }
   .nav-link{
     color: #fff;
@@ -64,6 +83,9 @@ body{
     }
     
     @include respond-to(sm) {
+      padding: 0  !important;
+    }
+    @include respond-to(md) {
       padding: 0  !important;
     }
     &:after{
@@ -90,6 +112,9 @@ body{
           bottom: -.9rem;
         }
         @include respond-to(sm) {
+          bottom: -.8rem;
+        }
+        @include respond-to(md) {
           bottom: -.8rem;
         }
       }

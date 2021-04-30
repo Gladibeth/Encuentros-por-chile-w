@@ -47,6 +47,17 @@
     @include respond-to(xs) {
       height: auto;
     }
+  
+    @include respond-to(sm) {
+      height: auto;
+    }
+  
+    @include respond-to(md) {
+      height: auto;
+    }
+    @include respond-to(lg) {
+      height: auto;
+    }
 
     video {
       width: 100%;
@@ -72,9 +83,28 @@
   grid-template-columns: 1fr 1fr 1fr 1.5fr;
   grid-gap: 2rem;
 
+  @include respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+  }
   &.padd-grid {
     padding: 4rem;
     background-color:var(--bg-body);
+
+    @include respond-to(xs) {
+      padding: 2rem;
+    }
+
+    @include respond-to(sm) {
+      padding: 2rem;
+    }
+    @include respond-to(md) {
+      padding: 2rem;
+    }
+    @include respond-to(lg) {
+      padding: 2rem;
+    }
+
+    
   }
   @include respond-to(xs){
     grid-template-columns: 1fr;

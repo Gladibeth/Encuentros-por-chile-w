@@ -8,10 +8,25 @@
     @include respond-to(xs) {
       padding: 0;
     }
+    @include respond-to(sm) {
+      padding: 2rem;
+    }
+    @include respond-to(md) {
+      padding: 2rem;
+    }
     
     .main-single__content {
       width: 60%;
       @include respond-to(xs) {
+        width: 100%;
+      }
+      @include respond-to(sm) {
+        width: 100%;
+      }
+      @include respond-to(md) {
+        width: 100%;
+      }
+      @include respond-to(lg) {
         width: 100%;
       }
       .main-single__title {
@@ -86,6 +101,19 @@
 
               @include respond-to(xs) {
                 font-size: 17px;
+                padding-right: 0rem;
+              }
+
+              @include respond-to(sm) {
+                font-size: 18px;
+                padding-right: 0rem;
+              }
+              @include respond-to(md) {
+                font-size: 18px;
+                padding-right: 0rem;
+              }
+              @include respond-to(md) {
+                font-size: 22px;
                 padding-right: 0rem;
               }
               &:after {
