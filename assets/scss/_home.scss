@@ -519,6 +519,12 @@ img{
       grid-template-columns: 1.5fr 1fr;
     }
 
+    .main-banner__item {
+      &:focus {
+        outline: none;
+      }
+    }
+
     &.grid__three {
       grid-template-columns: 1.5fr 1fr 1fr;
 
@@ -1024,11 +1030,59 @@ img{
 
     @include respond-to(xs) {
       grid-template-columns: 1fr;
+      position: relative;
+      z-index: 0;
     }
 
     @include respond-to(sm) {
       grid-template-columns: 1fr;
+      position: relative;
+      z-index: 0; 
     }
+
+
+    &:before{
+      top: 0;
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 150px;
+      right:0rem;
+      z-index: -1;
+      border-top: solid 130px var(--homefeatured-item2);
+      border-right: solid 130px var(--homefeatured-item2);
+      border-left: solid 130px transparent;
+      border-bottom: solid 130px transparent;
+      display: none;
+      @include respond-to(xs) {
+       display: block;
+      }
+      @include respond-to(sm) {
+        display: block;
+      }
+    }
+    &:after {
+      bottom: 0;
+      position: absolute;
+      content: "";
+      width:150px;
+      height: 150px;
+      right:0rem;
+      z-index: -1;
+      border-bottom: solid 130px var(--homefeatured-item2);
+      border-right: solid 130px var(--homefeatured-item2);
+      border-left: solid 130px transparent;
+      border-top: solid 130px transparent;
+      @include respond-to(xs) {
+        display: block;
+      }
+      @include respond-to(sm) {
+        display: block;
+      }
+      
+    }
+
+
     .main-featured__item{
       &:nth-child(1){       
         padding: 3rem 0rem 3rem 6rem;
@@ -1063,6 +1117,7 @@ img{
           display: flex;
           flex-direction: column;
           padding: 2rem;
+          background-color: var(--homefeatured-item1);
         }
 
         @include  respond-to(sm) {
@@ -1070,6 +1125,7 @@ img{
           display: flex;
           flex-direction: column;
           padding: 2rem;
+          background-color: var(--homefeatured-item1);
         }
 
         
@@ -1438,7 +1494,7 @@ img{
     }
     .slick-prev {
      
-      right: 35rem;
+      right: 40rem;
 
       @include respond-to(sm) {
         left: 2rem;
@@ -1457,7 +1513,7 @@ img{
     }
     
     .slick-next {
-      right: 33rem;
+      right: 38rem;
 
       @include respond-to(sm) {
         right: 42rem;

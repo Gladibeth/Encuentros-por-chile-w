@@ -93,7 +93,7 @@ body{
       width: 100%;
       height: 5px;
       background-color: transparent;
-      bottom: -2rem;
+      bottom: -1.8rem;
       left: 0;
       transition: 0.3s ease-in-out;
     }
@@ -105,7 +105,7 @@ body{
         width: 100%;
         height: 5px;
         background-color: #fff;
-        bottom: -1.5rem;
+        bottom: -1.8rem;
         left: 0;
 
         @include respond-to(xs) {
@@ -126,7 +126,7 @@ body{
         width: 100%;
         height: 5px;
         background-color: #fff;
-        bottom: -1.5rem;
+        bottom: -1.8rem;
         left: 0;
         transition: 0.3s ease-in-out;
         @include respond-to(xs) {
@@ -490,4 +490,174 @@ input:checked + .slider:before {
   .form-select {
     color: var(--text-placeholder) !important;
   }
+}
+
+
+/* Btn search navbar */
+@mixin scaledown {
+  -webkit-transform: scale(0);
+	    -ms-transform: scale(0);
+	        transform: scale(0);
+}
+
+@mixin scaleup {
+  -webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
+}
+
+
+body.search-open {
+	overflow: hidden;	
+}
+
+.close {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	background: none;
+	border: 0;
+	font-size: 1rem;
+	font-weight: 700;
+	display: block;
+	cursor: pointer;
+	color: black;
+  padding: 1rem 1.25rem;
+	background: white;
+  outline: none;
+  
+  &:hover {
+    background: $red;
+  }
+}
+
+.search-box.search-elem {
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: transparentize($black, .1);
+	transition: all .3s  ease-in-out;
+	@include scaledown;
+
+	.inner {
+		width: 70%;
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+    @include respond-to(xs){
+      width: 90%;
+    }
+	}
+
+	label {
+		color: white;
+		font-weight: 300;
+		font-family: $fontGotham;
+	}
+
+	button.submit {
+		outline: none;
+	  position: absolute;
+	  top: 0;
+	  right: 15px;
+	  height: 70px;
+    padding: 10px 2rem;
+	  background: $green;
+	  font-family: $fontGotham;
+	  font-size: 1rem;
+	  color: white;
+
+	    &[disabled] {
+	    	background: #ccc;
+	    	color: $purple;
+	    }
+	}
+
+	input[type="text"] {
+    padding: 10px;
+    height: 50px;
+    font-size: 25px;
+    font-family: "Gotham", sans-serif;
+    font-weight: 300;
+    border: none;
+    border-bottom: solid 2px #999;
+    transition: border 0.3s;
+    border-radius: 0;
+    width: 90%;
+
+    @include respond-to(xs) {
+      width: 75%;
+      height: 42px;
+    }
+
+    @include respond-to(sm) {
+      width: 75%;
+      height: 42px;
+    }
+
+		&:focus {
+			border-bottom: solid 2px $green;
+      box-shadow: none;
+		}
+	}
+
+	label.placeholder {
+		position: absolute;
+		top: 10px;
+		left: 2rem;
+		font-size: 25px;
+		font-weight: 300;
+		font-family: $fontGotham;
+		color: $gray;
+		transition: all .3s;
+
+    @include respond-to(xs) {
+      font-size: 18px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 20px;
+    }
+
+		&.move-up {
+			top: -25px;
+			color: white;
+			font-size: 1rem;
+
+      @include respond-to(xs) {
+        top: -30px;
+        color: white;
+        font-size: 18px;
+        left: 15px;
+      }
+      @include respond-to(sm) {
+        top: -30px;
+        color: white;
+        font-size: 18px;
+        left: 15px;
+      }
+		}
+	}
+}
+
+.search-box.search-elem.search-open {
+	@include scaleup;
+}
+
+.search-btn {
+	text-transform: uppercase;
+	font-family: $fontGotham;
+	font-size: 0.875rem;
+	padding: 0 10px;
+  display: inline-block;
+
+	&:hover {
+		color: #00A896;
+	}
 }

@@ -12,7 +12,56 @@
 
   .main-records__content {
     background-color: var(--homefeatured-item1);
+    @include respond-to(xs) {
+      position: relative;
+      z-index: 0;
+    }
 
+    @include respond-to(sm) {
+      position: relative;
+      z-index: 0; 
+    }
+
+    &:before{
+      top: 0;
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 150px;
+      right:0rem;
+      z-index: -1;
+      border-top: solid 130px var(--homefeatured-item2);
+      border-right: solid 130px var(--homefeatured-item2);
+      border-left: solid 130px transparent;
+      border-bottom: solid 130px transparent;
+      display: none;
+      @include respond-to(xs) {
+       display: block;
+      }
+      @include respond-to(sm) {
+        display: block;
+      }
+    }
+    &:after {
+      bottom: 0;
+      position: absolute;
+      content: "";
+      width:150px;
+      height: 150px;
+      right:0rem;
+      z-index: -1;
+      border-bottom: solid 130px var(--homefeatured-item2);
+      border-right: solid 130px var(--homefeatured-item2);
+      border-left: solid 130px transparent;
+      border-top: solid 130px transparent;
+      @include respond-to(xs) {
+        display: block;
+      }
+      @include respond-to(sm) {
+        display: block;
+      }
+      
+    }
     .main-records__item {
       &:nth-child(1) {
         padding: 3rem 6rem;
@@ -112,6 +161,10 @@
 
 
 .main-speakers {
+
+  @include respond-to(xs) {
+    flex-direction: column;
+  }
   .main-speakers__title {
     strong {
       line-height: 1.2;
@@ -166,6 +219,13 @@
   
 }
 .main-carddocs {
+
+  @include respond-to(xs) {
+    flex-direction: column;
+  }
+  @include respond-to(sm) {
+    flex-direction: column;
+  }
   &.main-carddocs__flex {
     display: flex;
     align-items: unset;
@@ -173,10 +233,10 @@
     height: 200px;
     padding: 2rem;
     @include respond-to(xs) {
-      height: 250px;
+      height: auto;
     }
     @include respond-to(sm) {
-      height: 250px;
+      height: auto;
     }
     @include respond-to(md) {
       height: 250px;
