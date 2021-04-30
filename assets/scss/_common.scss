@@ -559,6 +559,10 @@ body.search-open {
     @include respond-to(xs){
       width: 90%;
     }
+
+    @include respond-to(md){
+      width: 90%;
+    }
 	}
 
 	label {
@@ -666,4 +670,18 @@ body.search-open {
 	&:hover {
 		color: #00A896;
 	}
+}
+.input-range__active {
+  img {
+    width: 20px;
+  }
+}
+.active-range {
+  position: relative;
+  &.active-range {
+    display: block !important;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+  }
 }

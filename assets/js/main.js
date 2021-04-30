@@ -162,3 +162,12 @@ $('.search-btn').on('click', function(e) {
 $('.close').on('click', function() {
 	$(this).searchBox('close');
 });
+
+$('.input-range__active').click(function(){
+  $('.input__range').toggleClass('active-range')
+})
+
+$("#fader").on("input",function () {
+  $('.v-28').css("font-size", $(this).val() + "px");
+  $('.v-18').css("font-size", $(this).val() + "px");
+});

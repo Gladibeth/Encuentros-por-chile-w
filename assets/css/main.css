@@ -886,6 +886,11 @@ body.search-open {
     width: 90%;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-box.search-elem .inner {
+    width: 90%;
+  }
+}
 .search-box.search-elem label {
   color: white;
   font-weight: 300;
@@ -992,6 +997,20 @@ body.search-open {
 }
 .search-btn:hover {
   color: #00A896;
+}
+
+.input-range__active img {
+  width: 20px;
+}
+
+.active-range {
+  position: relative;
+}
+.active-range.active-range {
+  display: block !important;
+  position: absolute;
+  top: 1rem;
+  right: 0;
 }
 
 /* modal search */
