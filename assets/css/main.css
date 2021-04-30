@@ -4312,6 +4312,9 @@ footer {
     justify-content: center;
   }
 }
+.main-navigation__visible #select-box {
+  padding: 0.5rem 1rem;
+}
 
 :root {
   --primary-color:#e02934;
