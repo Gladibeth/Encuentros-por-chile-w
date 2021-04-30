@@ -1,10 +1,69 @@
 @import "variables";
 @import "mixins";
 
+.main-header__heigth {
+  height: 500px;
+
+  @include respond-to(xs) {
+    height: auto;
+  }
+
+  @include respond-to(sm) {
+    height: auto;
+  }
+
+  @include respond-to(md) {
+    height: auto;
+  }
+  @include respond-to(lg) {
+    height: auto;
+  }
+  .mini-banner__img {
+    height: 500px;
+
+    @include respond-to(xs) {
+      height: auto;
+    }
+
+    @include respond-to(sm) {
+      height: auto;
+    }
+
+    @include respond-to(md) {
+      height: auto;
+    }
+    @include respond-to(lg) {
+      height: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .mini-banner__video {
+    height: 500px;
+
+    @include respond-to(xs) {
+      height: auto;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
 .content-grid2{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   @include respond-to(xs){
+    grid-template-columns: 1fr;
+  }
+
+  @include respond-to(sm){
     grid-template-columns: 1fr;
   }
 }
@@ -20,6 +79,10 @@
   @include respond-to(xs){
     grid-template-columns: 1fr;
   }
+
+  @include respond-to(sm){
+    grid-template-columns: 1fr;
+  }
 }
 section{
   padding: 2rem;
@@ -32,6 +95,17 @@ img{
   font-size: 30px;
   font-family: $fontGotham;
   font-weight: 300;
+
+  @include respond-to(xs) {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  @include respond-to(sm) {
+    font-size: 24px;
+    text-align: center;
+  }
+
   &.title_lightred{
     color: var(--text-colordark);
   }
@@ -46,6 +120,15 @@ img{
     color:var(--text-titlecard);
     font-size: 38px;
   }
+
+  &.title__alignleft {
+   @include respond-to(xs) {
+      text-align: left;
+   } 
+   @include respond-to(sm) {
+    text-align: left;
+ } 
+  }
 }
 
 .main-title__small{
@@ -55,9 +138,32 @@ img{
   font-weight: 600;
   font-family: $fontGotham;
 
+  @include respond-to(xs){
+    font-size: 18px;
+  }
+
+  @include respond-to(sm){
+    font-size: 22px;
+  }
+
+  @include respond-to(md){
+    font-size: 22px;
+  }
+
   &.title-small__dark{
     color: var(--text-color);
     font-size: 25px;
+    @include respond-to(xs){
+      font-size: 18px;
+    }
+
+    @include respond-to(sm){
+      font-size: 22px;
+    }
+  
+    @include respond-to(md){
+      font-size: 22px;
+    }
   }
 }
 
@@ -68,6 +174,28 @@ img{
     line-height: 1.6;
     color: var(--text-colorlight);
     font-family: $fontGotham;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include respond-to(xs) {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    @include respond-to(sm) {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    @include respond-to(md) {
+      font-size: 17px;
+      line-height: 1.4;
+      
+    }
+    
   }
 
   &.description__red {
@@ -77,6 +205,26 @@ img{
       line-height: 1.6;
       color: var(--text-colordark);
       font-family: $fontGotham;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 6;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include respond-to(xs) {
+        font-size: 15px;
+        line-height: 1.2;
+      }
+
+      @include respond-to(sm) {
+        font-size: 17px;
+        line-height: 1.4;
+      }
+
+      @include respond-to(md) {
+        font-size: 17px;
+        line-height: 1.4;
+      }
     }
   }
 
@@ -87,6 +235,21 @@ img{
       line-height: 1.6;
       color: $white;
       font-family: $fontGotham;
+
+      @include respond-to(xs) {
+        font-size: 17px;
+        line-height: 1.2;
+      }
+
+      @include respond-to(sm) {
+        font-size: 17px;
+        line-height: 1.4;
+      }
+
+      @include respond-to(md) {
+        font-size: 17px;
+        line-height: 1.4;
+      }
     }
   }
 }
@@ -108,13 +271,21 @@ img{
     line-height: 1.2;
     color: var(--text-colorbtnout);
     font-family: $fontGotham;
+
+    @include respond-to(xs) {
+      font-size: 15px;
+    }
   }
   span{
-      font-size: 17px;
-      font-weight: 300;
-      font-family: $fontGotham; 
-      line-height: 1.4;
-      color: var(--text-colorbtnout);
+    font-size: 17px;
+    font-weight: 300;
+    font-family: $fontGotham; 
+    line-height: 1.4;
+    color: var(--text-colorbtnout);
+    
+    @include respond-to(xs) {
+      font-size: 15px;
+    }
   }
 }
 
@@ -128,6 +299,20 @@ img{
     color: var(--text-colorlight);
     font-family: $fontGotham;
     margin-top: .5rem;
+
+    @include respond-to(xs) {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    @include respond-to(sm) {
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    &.main-shared__textbluudark {
+      color: var(--bg-listsocial-cardv);
+    }
   }
   ul{
     list-style: none;
@@ -171,6 +356,23 @@ img{
           background-color: var(--bg-listsocial-card);
           i{
             color: var(--icon-listsocial-card);
+            font-size: 15px;
+          }
+        }
+      
+      }
+
+      &.list__bluedark {
+        border: 1px solid var(--bg-listsocial-cardv);
+
+        i{
+          color: var(--bg-listsocial-cardv);
+          font-size: 15px;
+        }
+        &:hover{
+          background-color: var(--bg-listsocial-cardv);
+          i{
+            color: var(--icon-listsocial-cardv);
             font-size: 15px;
           }
         }
@@ -224,8 +426,28 @@ img{
   border-radius: 0;
   background-color: var(--secondary-color);
 
+  @include respond-to(xs) {
+    font-size: 14px;
+  }
+
+  @include respond-to(sm) {
+    font-size: 16px;
+  }
+
   &.badge__large {
     font-size: 28px;
+
+    @include respond-to(xs) {
+      font-size: 20px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 22px;
+    }
+
+    @include respond-to(md) {
+      font-size: 22px;
+    }
   }
 }
 .main-line{
@@ -244,17 +466,83 @@ img{
     display: grid;
     grid-template-columns: 2fr 1fr;
 
+    @include respond-to(xs) {
+      grid-template-columns: 1fr;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
+
+    @include respond-to(md) {
+      grid-template-columns: 1.5fr 1fr;
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: 1.5fr 1fr;
+    }
+
     &.grid__three {
       grid-template-columns: 1.5fr 1fr 1fr;
 
+      @include respond-to(xs) {
+        grid-template-columns: 1fr;
+      }
+
+      @include respond-to(sm) {
+        grid-template-columns: 1fr;
+      }
+
+      @include respond-to(md) {
+        grid-template-columns: 1fr 1fr;
+      }
+  
+
       .main-banner__text {
+        @include respond-to(md) {
+          display:none !important;
+        }
+        @include respond-to(xs) {
+          padding: 2rem 2rem 1rem 2rem;
+          align-items: center;
+        }
 
         .main-banner__title {
           h1, h2 {
             font-size: 2.5rem;
+
+            @include respond-to(xs) {
+              font-size: 1.5rem;
+            }
+  
+            @include respond-to(sm) {
+              font-size: 2.5rem;
+            }
+  
+            @include respond-to(md) {
+              font-size: 1.5rem;
+            }
+  
+            @include respond-to(lg) {
+              font-size: 2.5rem;
+            }
           }
           p {
             font-size: 16px;
+            @include respond-to(xs) {
+              font-size: 14px;
+              line-height: 1.2;
+            }
+  
+            @include respond-to(sm) {
+              font-size: 16px;
+              line-height: 1.2;
+            }
+  
+            @include respond-to(md) {
+              font-size: 14px;
+              line-height: 1.2;
+            }
           }
         }
       }
@@ -272,9 +560,28 @@ img{
       align-items: flex-end;
       background-color: white;
       padding: 0 2rem 0 0;
+
+      @include respond-to(xs) {
+        padding: 2rem 2rem 1rem 2rem;
+        align-items: center;
+      }
+      
+      @include respond-to(sm) {
+        padding: 2rem 2rem 1rem 2rem;
+        align-items: center;
+      }
   
+
       .main-banner__title{
         text-align: right;
+
+        @include respond-to(xs) {
+          text-align: center;
+        }
+
+        @include respond-to(sm) {
+          text-align: center;
+        }
         h1 {
           text-transform: uppercase;
           font-weight: $extrabold;
@@ -282,7 +589,22 @@ img{
           font-family: $fontDin;
           line-height: .9;
           font-size: 3.5rem;
-  
+
+          @include respond-to(xs) {
+            font-size: 1.5rem;
+          }
+
+          @include respond-to(sm) {
+            font-size: 2.5rem;
+          }
+
+          @include respond-to(md) {
+            font-size: 1.5rem;
+          }
+
+          @include respond-to(lg) {
+            font-size: 2.5rem;
+          }
         }
         h2 {
           text-transform: uppercase;
@@ -291,6 +613,22 @@ img{
           font-family: $fontDin;
           font-size: 3.5rem;
           line-height: .9;
+          @include respond-to(xs) {
+            font-size: 1.5rem;
+          }
+
+
+          @include respond-to(sm) {
+            font-size: 2.5rem;
+          }
+
+          @include respond-to(md) {
+            font-size: 1.5rem;
+          }
+
+          @include respond-to(lg) {
+            font-size: 2.5rem;
+          }
         }
         p{
           font-size: 18px;
@@ -299,22 +637,89 @@ img{
           color: var(--text-colorlight);
           font-family: $fontGotham;
           color: $fixed-color-dark;
+
+          @include respond-to(xs) {
+            font-size: 14px;
+            line-height: 1.2;
+          }
+
+          @include respond-to(sm) {
+            font-size: 16px;
+            line-height: 1.2;
+          }
+
+          @include respond-to(md) {
+            font-size: 14px;
+            line-height: 1.2;
+          }
+
+          @include respond-to(lg) {
+            font-size: 16px;
+            line-height: 1.2;
+          }
         }
       }
     }
     .main-banner__card {
       width: 80%;
+
+      @include respond-to(sm) {
+        width: 45%;
+      }
+
+      @include respond-to(md) {
+        width: 95%;
+      }
+      @include respond-to(lg) {
+        width: 90%;
+      }
       .main-banner__cardgrid {
         display: grid;
         grid-template-columns: 1fr 2fr;
         .main-banner__cardimg {
           width: 100px;
+
+          @include respond-to(xs) {
+            width: 60px;
+          }
+
+          @include respond-to(sm) {
+            width: 60px;
+          }
+
+          @include respond-to(md) {
+            width: 60px;
+          }
+
+          @include respond-to(lg) {
+            width: 85px;
+          }
+
+          img {
+            @include respond-to(xs){
+              border-radius: 50%;
+            }
+
+            @include respond-to(sm){
+              border-radius: 50%;
+            }
+          }
         }
         .main-banner__cardtext {
           display: flex;
           align-items: center;
           span  {
             color:$fixed-color-dark;
+
+            @include respond-to(xs) {
+              font-size: 14px;
+              line-height: 1.2;
+            }
+
+            @include respond-to(md) {
+              font-size: 12px;
+              line-height: 1.2;
+            }
           }
           strong {
             color:$fixed-color-dark;
@@ -332,6 +737,18 @@ img{
         
         span{
           font-weight: 800;
+          font-size: 14px;
+          @include respond-to(xs) {
+            font-size: 10px;
+          }
+
+          @include respond-to(sm) {
+            font-size: 14px;
+          }
+
+          @include respond-to(md) {
+            font-size: 10px;
+          }
           &:nth-child(odd) {
             color: $fixed-color-red;
           }
@@ -349,6 +766,26 @@ img{
     display: flex;
     justify-content: flex-end;
     padding-right: .9rem;
+
+    @include respond-to(xs) {
+      bottom: -1rem;
+      justify-content: center;
+      padding-right: 0;
+    }
+
+    @include respond-to(sm) {
+      bottom: -1rem;
+      justify-content: center;
+      padding-right: 0;
+    }
+
+    @include respond-to(md) {
+      bottom: 0rem;
+    }
+    @include respond-to(lg) {
+      bottom: 0rem;
+     
+    }
     li {
       height: 8px;
       width: 15px;
@@ -383,16 +820,36 @@ img{
 /* Home - About us */
 .main-homeabout {
 
+
+  @include respond-to(xs) {
+    padding: 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 0;
+    margin-top: 2rem;
+  }
   .main-homeabout__content {
       background-color: var(--primary-color);
       
-
       .main-homeabout__item {
         &:nth-child(1){
           padding: 8rem 6rem;
           @include respond-to(xs){
-            padding: 2rem;
+            padding: 2rem 2rem 0 2rem;
            }
+
+          @include respond-to(sm){
+          padding: 2rem 2rem 0 2rem;
+          }
+
+          @include respond-to(md){
+            padding: 4rem 2rem;
+          }
+
+          @include respond-to(lg){
+            padding: 3rem;
+          }
         }
 
         &:nth-child(2) {
@@ -400,12 +857,42 @@ img{
           align-items: center;
           position: relative;
 
+          @include respond-to(xs) {
+            margin-left: 2rem;
+          }
+
+          @include respond-to(sm) {
+            margin-left: 2rem;
+          }
+
+          
           .main-homeabout__text {
             background-color: var(--bg-color);
             height: 80%;
             position: absolute;
             bottom: 0;
-            padding: 4rem 5rem;        
+            padding: 4rem 8rem;   
+            
+            @include respond-to(xs) {
+              height: auto;
+              position: unset;
+              padding: 1rem;
+            }
+
+            @include respond-to(sm) {
+              height: auto;
+              position: unset;
+              padding: 2rem;
+            }
+
+            @include respond-to(md){
+              padding: 2rem;
+              height: auto;          
+            }
+
+            @include respond-to(lg){
+              padding: 2rem;   
+            }
           }
         }
         .main-homeabout__contitle{           
@@ -425,11 +912,45 @@ img{
           font-weight: 600;
           font-family: $fontGotham;
 
+          @include respond-to(xs) {
+            font-size: 20px;
+          }
+
+          @include respond-to(sm) {
+            font-size: 22px;
+          }
+
+          @include respond-to(md) {
+            font-size: 24px;
+            max-height: 100%;
+            
+          }
+
           &.small {
             font-size: 17px;
             font-weight: 300;
             line-height: 1.6;
             color: var(--text-color);
+
+            @include respond-to(xs) {
+              font-size: 15px;
+            }
+
+            @include respond-to(md) {
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 6;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            @include respond-to(lg) {
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 6;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
           }
 
           strong {
@@ -450,14 +971,47 @@ img{
 /* Featured */
 
 .main-featured{
+
+  @include respond-to(xs) {
+    padding: 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 0;
+  }
+
   .main-featured__content{
     background-color: var(--homefeatured-item1);
     display: grid;
     grid-template-columns: 1.3fr 1fr;
+
+    @include respond-to(xs) {
+      grid-template-columns: 1fr;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
     .main-featured__item{
       &:nth-child(1){       
         padding: 3rem 0rem 3rem 6rem;
         width: 80%;
+
+        @include respond-to(xs) {
+          padding: 2rem 0rem 2rem 2rem;
+        }
+
+        @include respond-to(sm) {
+          padding: 2rem 0rem 2rem 2rem;
+        }
+
+        @include respond-to(md) {
+          padding: 3rem 0rem 3rem 2rem;
+        }
+
+        @include respond-to(lg) {
+          padding: 3rem 0rem 3rem 2rem;
+        }
        
       }
       &:nth-child(2){
@@ -466,6 +1020,22 @@ img{
         align-items: center;  
         padding: 0 2rem 0 0;
         position: relative;
+
+        @include  respond-to(xs) {
+          order: -1;
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+        }
+
+        @include  respond-to(sm) {
+          order: -1;
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+        }
+
+        
         &:before{
           top: 0;
           position: absolute;
@@ -477,6 +1047,17 @@ img{
           border-right: solid 175px var(--homefeatured-item2);
           border-left: solid 175px transparent;
           border-bottom: solid 175px transparent;
+
+          @include respond-to(xs) {
+            display: none;
+          }
+          @include respond-to(md) {
+            left:-10rem;
+          }
+
+          @include respond-to(lg) {
+            left:-12rem;
+          }
         }
         &:after {
           bottom: 0;
@@ -491,9 +1072,23 @@ img{
           border-top: solid 175px transparent;
           z-index: 0;
           
+          @include respond-to(xs) {
+            display: none;
+          }
+          @include respond-to(md) {
+            left:-10rem;
+          }
+
+          @include respond-to(lg) {
+            left:-12rem;
+          }
         }
         .main-featured__img {
           z-index: 1;
+
+          @include respond-to(sm) {
+            padding: 1rem;
+          }
         }
         
       }
@@ -506,12 +1101,30 @@ img{
 .main-homeevents{
   padding: 4rem 8rem;
   @include respond-to(xs){
-    padding: 2rem;
+    padding: 2rem 0;
    }
+
+  @include respond-to(sm){
+  padding: 2rem;
+  }
+
+  @include respond-to(md){
+    padding: 4rem;
+  }
+
+  @include respond-to(lg){
+    padding: 4rem;
+  }
 }
 
 .main-homeevents__content{
   margin-top: 2rem;
+
+  @include respond-to(sm) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+  }
   .main-homeevents__item{
     &:focus{
       outline: none;
@@ -520,9 +1133,24 @@ img{
 
   .main-homeevents__card{
     padding-right: 2.5rem;
+
+    @include respond-to(xs) {
+      padding-right: 0;
+    }
+    @include respond-to(sm) {
+      padding-right: 0;
+    }
     .main-homeevents__img{
       height: 275px;
       padding: var(--card-paddings);
+
+      @include respond-to(xs){
+        padding: 0;
+      }
+
+      @include respond-to(sm){
+        padding: 0;
+      }
       img{
         object-fit: cover;
         height: 100%;
@@ -660,12 +1288,23 @@ img{
     background-color: var(--homefeatured-bg-card);
     padding: var(--card-paddings);
     padding-bottom: 2rem;
+
+    @include respond-to(xs) {
+      padding: 2rem;
+    }
     h2{
       color: var(--text-color);
       font-size: 20px;
       line-height: 1.2;
       font-weight: 600;
       font-family: $fontGotham;
+
+      @include respond-to(xs) {
+        font-size: 15px;
+      }
+      @include respond-to(md) {
+        font-size: 18px;
+      }
     }
 
     &.padding-general {
@@ -673,17 +1312,38 @@ img{
     }
   }
 }
-
+.main-homepost {
+  @include respond-to(xs) {
+    padding: 0;
+  }
+  @include respond-to(sm) {
+    padding: 0;
+  }
+}
 .main-homepost__general {
   background-color: var(--homenews-item1);
   padding: 4rem 6rem;
 
+
+
   &.bg__gray {
     background-color: var(--homefeatured-item1);
   }
-  @include respond-to(xs){
+  @include respond-to(xs) {
+    padding: 2rem 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 2rem 0;
+  }
+
+  @include respond-to(md) {
     padding: 2rem;
-   }
+  }
+
+  @include respond-to(lg) {
+    padding: 4rem 2rem;
+  }
   .main-homepost__content {
     margin-top: 2rem;
 
@@ -697,9 +1357,36 @@ img{
       padding-right: 5rem;
       height: 335px;
 
+      @include respond-to(xs) {
+        padding-right: 0;
+      }
+
+      @include respond-to(sm) {
+        padding-right: 0;
+      }
+
+      @include respond-to(md) {
+        padding-right: 2rem;
+      }
+
+      @include respond-to(lg) {
+        padding-right: 2rem;
+      }
+
       img{
         object-fit: cover;
         height: 100%;
+      }
+    }
+
+    .main-homepost__text {
+
+      @include respond-to(xs) {
+        padding: 1rem 2rem;
+      }
+
+      @include respond-to(sm) {
+        padding: 1rem 2rem;
       }
     }
 
@@ -707,10 +1394,22 @@ img{
       background: transparent;
       z-index: 999;
       top: 3%;
+
+      @include respond-to(sm) {
+        top: 55%;
+      }
     }
     .slick-prev {
      
       right: 35rem;
+
+      @include respond-to(sm) {
+        left: 2rem;
+      }
+
+      @include respond-to(lg) {
+        right: 27rem;
+      }
       &:before {
         font-family: "FontAwesome";
         content: "\f177";
@@ -722,6 +1421,14 @@ img{
     
     .slick-next {
       right: 33rem;
+
+      @include respond-to(sm) {
+        right: 42rem;
+      }
+
+      @include respond-to(lg) {
+        right: 27rem;
+      }
       &:before {
         font-family: "FontAwesome";
         content: "\f178";
@@ -734,6 +1441,11 @@ img{
       bottom: 1rem;
       display: flex;
       justify-content: flex-end;
+
+      @include respond-to(sm) {
+        bottom: 2rem;
+        padding-right: 2rem;
+      }
       li {
         height: 8px;
         width: 15px;
@@ -774,6 +1486,17 @@ img{
    padding: 2rem;
    text-align: center;
   }
+  @include respond-to(sm){
+    text-align: center;
+   }
+
+   @include respond-to(md) {
+     padding: 2rem;
+   }
+
+   @include respond-to(lg) {
+    padding: 2rem;
+  }
   .main-access__content{
     margin-top: 2rem;
     ul{
@@ -783,13 +1506,21 @@ img{
       @include respond-to(xs){
         flex-direction: column;
       }
+
+      @include respond-to(sm){
+        flex-direction: column;
+      }
       li{
         margin-right: 1.5rem;
 
         @include respond-to(xs){
           text-align: center;
           margin-bottom: 1.5rem;
-         }
+        }
+        @include respond-to(sm){
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
           a{
             font-size: 17px;
             font-weight: 300;
@@ -811,6 +1542,17 @@ footer{
   @include respond-to(xs){
     padding: 2rem;
    }
+
+   @include respond-to(sm){
+    padding: 2rem;
+   }
+
+   @include respond-to(md){
+    padding: 2rem;
+   }
+   @include respond-to(lg){
+    padding: 2rem;
+   }
 }
 .main-footer__primary{
   display: flex;
@@ -819,12 +1561,18 @@ footer{
   @include respond-to(xs){
     flex-direction: column;
   }
+
+  @include respond-to(sm){
+    flex-direction: column;
+  }
   .main-footer__imgs{
     display: flex;
 
     @include respond-to(xs){
       flex-direction: column;
     }
+
+  
     .main-footer__img{
       width: 200px;
     }
@@ -843,6 +1591,10 @@ footer{
     }
     li{
       margin-right: 1.5rem;
+
+      @include respond-to(sm) {
+        margin-right: 0;
+      }
         a{
           font-size: 17px;
           font-weight: 300;
@@ -852,6 +1604,36 @@ footer{
           padding: 10px;
           text-decoration: none;
         }
+    }
+  }
+}
+
+
+/* mini related */
+.main-minirelated {
+  padding: 2rem;
+  .main-minicard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #c8c9ca;
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+    .main-minicard__text {
+  
+      .main-minicard__title {
+        color: var(--text-color);
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 600;
+        font-family: $fontGotham;
+      }
+
+      .btn-custom  {
+        font-size: 13px;
+      }
     }
   }
 }

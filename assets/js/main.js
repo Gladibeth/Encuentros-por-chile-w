@@ -60,7 +60,7 @@ $(".main-slider2").slick({
 });
 
 
-$(".main-banner__slider, .main-homepost__content,.main-meetingtarget__content").slick({
+$(".main-banner__slider, .main-slider1").slick({
   arrows: true,
   dots: true,
   infinite: true,
@@ -93,4 +93,26 @@ function switchTheme(e) {
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 
+
+
+
+$(document).ready(function(){
+  var width = window.innerWidth;
+  var resolucion = $( window ).width();
+
+  if(resolucion <= 767){
+    $('.main-btn__offcanvas button').click(function(){
+      $('.nav-pills').toggleClass('active_ul');
+      
+    })
+    $('.nav-link').click(function(){
+      $('.nav-pills').removeClass('active_ul');
+     
+    })
+  }
+  else{
+      console.log("Si cargo include o cargo template grande");
+      cargarInclude = 1;
+  }
+});
 

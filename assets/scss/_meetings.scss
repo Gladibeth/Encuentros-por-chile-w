@@ -2,6 +2,30 @@
 @import "mixins";
 
 
+.main-btn__offcanvas {
+  background-color: var(--primary-color);
+  color: $white;
+  padding: 2rem;
+  font-family: $fontGotham;
+  display: none;
+  
+  @include respond-to(xs) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    border: none;
+    padding:0;
+
+    &:focus{
+      box-shadow: 0 0 0 0;
+      outline: none;
+    }
+  }
+}
 .main-video {
   display: flex;
   justify-content: center;
@@ -17,16 +41,54 @@
 }
 
 /* Meeting - About */
+.main-meetingabout {
+
+  @include respond-to(xs) {
+    padding: 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 0;
+  }
+
+  @include respond-to(md) {
+    padding: 0;
+  }
+}
 .main-meetingabout__content{
   display: grid;
   grid-template-columns: 3fr 1fr;
   background-color: var(--primary-color);
 
+  @include respond-to(xs) {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond-to(sm) {
+    grid-template-columns:1fr;
+  }
+
+  
   .main-meetingabout__item {
 
     &:nth-child(1) {
       width: 80%;
       padding: 3rem 0rem 2rem 6rem;
+
+      @include respond-to(xs) {
+        padding: 3rem 2rem 2rem 2rem;
+        width: 100%;
+      }
+      @include respond-to(sm) {
+        padding: 3rem 2rem 2rem 2rem;
+      }
+
+      @include respond-to(md) {
+        padding: 3rem 2rem 2rem 2rem;
+      }
+      @include respond-to(lg) {
+        padding: 3rem 2rem 2rem 2rem;
+      }
     }
     &:nth-child(2) {
       background-color: var(--bg-meetingabout);
@@ -34,17 +96,25 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+       @include respond-to(xs) {
+         display: none;
+       }
+
+       @include respond-to(sm) {
+        display: none;
+      }
       &:before{
         top: 0;
         position: absolute;
         content: "";
         width: 150px;
         height: 150px;
-        left: -10rem;
-        border-top: solid 85px var(--bg-meetingabout);
-        border-right: solid 85px var(--bg-meetingabout);
-        border-left: solid 85px transparent;
-        border-bottom: solid 85px transparent;
+        left: -12rem;
+        border-top: solid 100px var(--bg-meetingabout);
+        border-right: solid 100px var(--bg-meetingabout);
+        border-left: solid 100px transparent;
+        border-bottom: solid 100px transparent;
       }
       &:after {
         bottom: 0;
@@ -52,13 +122,26 @@
         content: "";
         width:150px;
         height: 150px;
-        left: -10rem;
-        border-bottom: solid 85px var(--bg-meetingabout);
-        border-right: solid 85px var(--bg-meetingabout);
-        border-left: solid 85px transparent;
-        border-top: solid 85px transparent;
+        left: -12rem;
+        border-bottom: solid 100px var(--bg-meetingabout);
+        border-right: solid 100px var(--bg-meetingabout);
+        border-left: solid 100px transparent;
+        border-top: solid 100px transparent;
         z-index: 0;
         
+      }
+
+      .main-meetingabout__img {
+        width: 450px;
+
+        @include respond-to(md) {
+          width: 250px;
+        }
+
+        @include respond-to(lg) {
+          width: 250px;
+        }
+
       }
     }
   }
@@ -72,6 +155,14 @@
     line-height: 1.2;
     font-weight: 600;
     font-family: "Gotham", sans-serif;
+
+    @include respond-to(xs) {
+      font-size: 22px;
+    }
+
+    @include respond-to(md) {
+      font-size: 22px;
+    }
   }
 }
 
@@ -93,25 +184,78 @@
 
 
 /* Meeting - Target */
+.main-meetingtarget{
+  @include respond-to(xs) {
+    padding: 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 0;
+  }
+}
 .main-meetingtarget__content {
   margin-top: 2rem;
+
+  .main-meetingtarget__item {
+
+    @include respond-to(sm) {
+      margin-bottom: 2rem;
+    }
+    &:last-child {
+      @include respond-to(sm) {
+        margin-bottom: 0rem;
+      }
+    }
+  }
   
   .main-meetingtarget__grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
-  
+
+    @include respond-to(xs) {
+      grid-template-columns: 1fr;
+    }
+    
+    
     .main-meetingtarget__img {
       display: flex;
       align-items: center;
-      padding: 2rem 0 2rem 2rem;
       position: relative;
       img{
+        padding: 2rem 0 2rem 2rem;
         position: absolute;
+        right: -1rem;
+
+        @include respond-to(xs) {
+          padding: 0rem 4rem 0rem 4rem;
+          position: unset;
+        }
+
+        @include respond-to(sm) {          
+          padding: 2rem 0 2rem 0rem;
+          position: unset;
+        }
       }
     }
     .main-meetingtarget__text {
       background-color: var(--bg-color);
       padding: 4rem 6rem;
+
+      @include respond-to(xs) {
+        padding: 2rem;
+        background-color: var(--homenews-item1);
+      }
+
+      @include respond-to(sm) {
+        padding: 2rem 3rem;
+      }
+
+      @include respond-to(md) {
+        padding:  3rem;
+      }
+      @include respond-to(lg) {
+        padding:  4rem;
+      }
     }
 
   }
@@ -159,16 +303,72 @@
   margin-top: 2rem;
   background-color: var(--bg-meetingabout);
 
+  .main-meetingprograms__content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+     @include respond-to(xs) {
+       grid-template-columns: 1fr;
+     }
+     @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
+    @include respond-to(md) {
+      grid-template-columns: 1fr 3fr;
+    }
+  }
   .main-meetingprograms__item {
+
+    @include respond-to(xs) {
+      margin-left: 2rem;
+      margin-top: 2rem;
+    }
+
+    @include respond-to(sm) {
+      margin-left: 2rem;
+      margin-top: 2rem;
+    }
+
+    
     &:nth-child(1){
-      padding: 6rem;
+      padding: 6rem 6rem 0 6rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
+      @include respond-to(xs) {
+        padding:0;
+      }
+
+      @include respond-to(sm) {
+        padding: 2rem 2rem 0  2rem;
+      }
+
+      @include respond-to(md) {
+        padding: 2rem 0rem 0 2rem;
+      }
+
+     
+      @include respond-to(lg) {
+        padding: 3rem 2rem 0 2rem;
+      }
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .main-meetingprograms__img{
       width: 400px;
+
+      @include respond-to(xs) {
+        display: none;
+      }
+
+      @include respond-to(sm) {
+        display: none;
+      }
     }
   }
 
@@ -182,7 +382,7 @@
     margin-top: -1rem;
   }
   &:nth-child(2) {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     margin-left: 2rem;
   }
 
@@ -193,6 +393,21 @@
       font-weight: 300;
       color: var(--text-colordark);
       margin: 1.5rem 0;
+
+      @include respond-to(xs) {
+        font-size: 1.3rem;
+        margin: .5rem 0;
+      }
+
+      @include respond-to(sm) {
+        font-size: 22px;
+        margin: .5rem 0;
+      }
+
+      @include respond-to(md) {
+        font-size: 24px;
+        margin: .5rem 0;
+      }
 
     }
     ul {
@@ -208,6 +423,20 @@
         position: relative;
         color: var(--text-color);
 
+        @include respond-to(xs) {
+          font-size: 15px;
+        }
+
+        @include respond-to(sm) {
+          font-size: 17px;
+          line-height: 1.4;
+        }
+
+        @include respond-to(md) {
+          font-size: 17px;
+          line-height: 1.4;
+        }
+
         &:before {
           position: absolute;
           content: "";
@@ -215,8 +444,20 @@
           color: var(--text-colordark);
           margin-right: 1rem;
           left: -1.5rem;
-          font-size: 29px;
+          font-size: 30px;
           top: -.6rem;
+
+           @include respond-to(xs) {
+             font-size: 25px;
+           }
+
+           @include respond-to(sm) {
+            font-size: 25px;
+          }
+
+          @include respond-to(md) {
+            font-size: 25px;
+          }
         }
       }
 
@@ -236,6 +477,14 @@
   .mini-banner__grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+
+    @include respond-to(xs) {
+      grid-template-columns: 1fr;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 .mini-banner__text {
@@ -244,6 +493,19 @@
   justify-content: center;
   padding: 8rem 0rem 8rem 8rem;
 
+  @include respond-to(xs) {
+    padding: 2rem 0rem 2rem 2rem;
+  }
+  @include respond-to(sm) {
+    padding: 2rem 0rem 2rem 2rem;
+  }
+  @include respond-to(md) {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  @include respond-to(lg) {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+
   position: relative;
   &:before{
     top: 0;
@@ -251,11 +513,30 @@
     content: "";
     width: 100px;
     height: 100px;
-    right: -19rem;
+    right: -23rem;
     border-top: solid 160px var(--homefeatured-item1);
     border-left: solid 160px var(--homefeatured-item1);
     border-right: solid 160px transparent;
     border-bottom: solid 160px transparent;
+
+    @include respond-to(xs) {
+      display: none;
+    }
+    @include respond-to(sm) {
+      display: none;
+    }
+
+    @include respond-to(md)  {
+      right: -9rem;
+      border-top: solid 80px var(--homefeatured-item1);
+      border-left: solid 80px var(--homefeatured-item1);
+      border-right: solid 80px transparent;
+      border-bottom: solid 80px transparent;
+    }
+
+    @include respond-to(lg) {
+      right: -20rem;
+    }
   }
   &:after {
     bottom: 0;
@@ -263,13 +544,40 @@
     content: "";
     width: 100px;
     height: 100px;
-    right: -19rem;
+    right: -23rem;
     border-bottom: solid 160px var(--homefeatured-item1);
     border-left: solid 160px var(--homefeatured-item1);
     border-right: solid 160px transparent;
     border-top: solid 160px transparent;
     z-index: 0;
     
+    @include respond-to(xs) {
+      display: none;
+    }
+    @include respond-to(sm) {
+      display: none;
+    }
+
+    @include respond-to(md) {
+      right: -9rem;
+      border-bottom: solid 80px var(--homefeatured-item1);
+      border-left: solid 80px var(--homefeatured-item1);
+      border-right: solid 80px transparent;
+      border-top: solid 80px transparent;
+    }
+    @include respond-to(lg) {
+      right: -20rem;
+    }
+  }
+}
+
+.mini-banner__img {
+  @include respond-to(xs) {
+    order: -1;
+  }
+
+  @include respond-to(sm) {
+    order: -1;
   }
 }
 
@@ -282,6 +590,25 @@
   grid-gap: 3rem 3rem;
   padding: 6rem;
 
+  @include respond-to(xs) {
+    padding: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  @include respond-to(sm) {
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond-to(md) {
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond-to(lg) {
+    padding: 2rem;
+  }
+  
   .main-cardtabs__bg{
     background: var(--bg-cardtabs-meeting);
     .main-cardtabs{
@@ -290,9 +617,19 @@
       padding: 3rem;
       z-index: 1;
       transition: 0.3s ease-in-out;
-    /*   border-right: 8px solid var(--bg-form);
-      border-bottom: 8px solid var(--bg-form);
-      transition: 0.3s ease-in-out; */
+      
+      @include respond-to(xs) {
+        padding: 2rem;
+      }
+      @include respond-to(sm) {
+        padding: 2rem;
+      }
+      @include respond-to(md) {
+        padding: 2rem;
+      }
+      @include respond-to(lg) {
+        padding: 2rem;
+      }
       &:before{
         top: 0;
         position: absolute;
@@ -305,6 +642,26 @@
         border-left: solid 160px transparent;
         border-bottom: solid 160px transparent;
         z-index: -1;
+
+        @include respond-to(xs){
+          border-top: solid 125px var(--homefeatured-item2);
+        border-right: solid 125px var(--homefeatured-item2);
+        border-left: solid 125px transparent;
+        border-bottom: solid 125px transparent;
+        }
+
+        @include respond-to(sm){
+          border-top: solid 115px var(--homefeatured-item2);
+        border-right: solid 115px var(--homefeatured-item2);
+        border-left: solid 115px transparent;
+        border-bottom: solid 115px transparent;
+        }
+        @include respond-to(lg){
+          border-top: solid 138px var(--homefeatured-item2);
+          border-right: solid 138px var(--homefeatured-item2);
+          border-left: solid 138px transparent;
+          border-bottom: solid 138px transparent;
+        }
       }
       &:after {
         bottom: 0;
@@ -318,6 +675,26 @@
         border-left: solid 160px transparent;
         border-top: solid 160px transparent;
         z-index: -1;
+
+        @include respond-to(xs){
+          border-bottom: solid 125px var(--homefeatured-item2);
+          border-right: solid 125px var(--homefeatured-item2);
+          border-left: solid 125px transparent;
+          border-top: solid 125px transparent;
+        }
+
+        @include respond-to(sm){
+          border-bottom: solid 115px var(--homefeatured-item2);
+          border-right: solid 115px var(--homefeatured-item2);
+          border-left: solid 115px transparent;
+          border-top: solid 115px transparent;
+        }
+        @include respond-to(lg){
+          border-bottom: solid 138px var(--homefeatured-item2);
+          border-right: solid 138px var(--homefeatured-item2);
+          border-left: solid 138px transparent;
+          border-top: solid 138px transparent;
+        }
         
       }
 
@@ -333,6 +710,10 @@
 
 .main-tabs__primary {
   border-bottom: 4px solid #eaeaea;
+
+  @include respond-to(xs) {
+    border-bottom: 4px solid transparent;
+  }
   &.not-border {
     border-bottom: 4px solid transparent;
   }
@@ -344,6 +725,26 @@
   .nav-pills {
     padding: 4rem 6rem 0 6rem;
     margin-bottom: 0 !important;
+
+    @include respond-to(xs) {
+      padding: 1rem 2rem 0 2rem;
+      margin-bottom: 0 !important;
+      display: flex;
+      flex-direction: column;
+      display: none;
+    }
+
+    @include respond-to(sm) {
+      padding: 4rem 2rem 0 2rem;
+    }
+    @include respond-to(md) {
+      padding: 4rem 2rem 0 2rem;
+    }
+    &.active_ul {
+      @include respond-to(xs) {
+        display: block;
+      }
+    }
     .nav-item {
       padding: .5rem;
       .nav-link {
@@ -353,6 +754,8 @@
         &.active {
           color: var(--text-colorbtn);
           position: relative;
+
+         
           &:after{
             content: '';
             position: absolute;
@@ -360,6 +763,12 @@
             width: 100%;
             height: 4px;
             background-color: var(--text-colorbtn);
+
+            @include respond-to(xs) {
+              display: none;
+            }
+
+           
           }
         }
         &:after{
@@ -369,6 +778,11 @@
           width: 100%;
           height: 4px;
           background-color: transparent;
+
+          @include respond-to(xs) {
+            display: none;
+          }
+
         }
         &:before{
           content: "";
@@ -378,6 +792,9 @@
           width: 2px;
           height: 15px;
           background-color: #eaeaea;
+          @include respond-to(xs) {
+            display: none;
+          }
         }
 
        

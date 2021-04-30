@@ -14,48 +14,100 @@ body{
   background-color:var(--primary-color);
   padding-top: 0rem;
     padding-bottom: 0rem;
- 
 }
-.nav-link{
-  color: #fff;
-  font-family: $fontGotham;
-  font-weight: $light;
-  font-size: 18px;
-  padding: 0 1.3rem !important;
 
-  position: relative;
+.navbar-brand {
+  margin-right: 0;
+  @include respond-to(xs) {
+    width: 100px;
+  }
+  @include respond-to(sm) {
+    width: 180px;
+  }
+}
 
-  &:after{
-    @include pseudo();
-    width: 100%;
-    height: 5px;
-    background-color: transparent;
-    bottom: -2rem;
-    left: 0;
-    transition: 0.3s ease-in-out;
+.navbar-search {
+  
+  i {
+    color: $white
+  }
+}
+
+.navbar-toggler {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0;
+  }
+}
+
+.nav-item {
+  @include respond-to(xs) {
+    padding-bottom: 1.5rem;
   }
 
-  &.active{
-    
-    &:after{
-      @include pseudo();
-      width: 100%;
-      height: 5px;
-      background-color: #fff;
-      bottom: -2rem;
-      left: 0;
-    }
+  @include respond-to(sm) {
+    padding-bottom: 1.5rem;
   }
-  &:hover{
+  &:nth-child(1) {
+    padding-top: 1rem;
+  }
+  .nav-link{
     color: #fff;
+    font-family: $fontGotham;
+    font-weight: $light;
+    font-size: 18px;
+    padding: 0 1.3rem !important;
+    position: relative;
+
+    @include respond-to(xs) {
+      padding: 0  !important;
+    }
+    
+    @include respond-to(sm) {
+      padding: 0  !important;
+    }
     &:after{
       @include pseudo();
       width: 100%;
       height: 5px;
-      background-color: #fff;
+      background-color: transparent;
       bottom: -2rem;
       left: 0;
       transition: 0.3s ease-in-out;
+    }
+  
+    &.active{
+      
+      &:after{
+        @include pseudo();
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        bottom: -1.5rem;
+        left: 0;
+
+        @include respond-to(xs) {
+          bottom: -.9rem;
+        }
+        @include respond-to(sm) {
+          bottom: -.8rem;
+        }
+      }
+    }
+    &:hover{
+      color: #fff;
+      &:after{
+        @include pseudo();
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        bottom: -1.5rem;
+        left: 0;
+        transition: 0.3s ease-in-out;
+        @include respond-to(xs) {
+          bottom: -.9rem;
+        }
+      }
     }
   }
 }
@@ -147,6 +199,14 @@ input:checked + .slider:before {
   left: 50%;
   transform: translate(-50%);
 
+  @include respond-to(xs) {
+    display: none;
+  }
+
+  @include respond-to(sm) {
+    display: none;
+  }
+
   .main-down__scroll{
     border: 5px solid #fff;
     border-radius: 20px;
@@ -194,6 +254,16 @@ input:checked + .slider:before {
   transition: all ease-in-out 0.3s;
   text-decoration: none;
 
+  @include respond-to(xs) {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  @include respond-to(md) {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
   &[type="submit"] {
     border: 0;
     cursor: pointer;
@@ -209,6 +279,10 @@ input:checked + .slider:before {
     background-color: var(--bg-form);
     color: var(--text-form);
     border: 1px solid var(--bg-border-form);
+
+    @include respond-to(md) {
+      padding: 10px 20px;
+    }
   }
   &.light-shadow {
     box-shadow: 0px 12px 31px 0px rgba(var(--text-colorbtn), 0.25);
@@ -229,13 +303,44 @@ input:checked + .slider:before {
     font-size: 18px;
     padding: 12px 0px;
 
+    @include respond-to(xs) {
+      font-size: 15px;
+      padding: 10px 0px;
+    }
+  
+
     &.outline-dark{
       background-color: transparent;
       color: var(--text-colorbtnout);
       font-size: 18px;
+
+      @include respond-to(xs) {
+        font-size: 15px;
+        padding: 10px 0px;
+      }
+
       &:hover {
         background-color: transparent;
         color: var(--text-colorbtnout);
+        opacity: 0.5;
+        transition: all ease-in-out 0.3s;
+      }
+    }
+
+    &.outline-bluedark  {
+      
+      background-color: transparent;
+      color: var(--text-card-permalink);
+      font-size: 18px;
+
+      @include respond-to(xs) {
+        font-size: 15px;
+        padding: 10px 0px;
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: var(--text-card-permalink);
         opacity: 0.5;
         transition: all ease-in-out 0.3s;
       }
@@ -259,6 +364,11 @@ input:checked + .slider:before {
     background-color: transparent;
     color: var(--secondary-color);
     font-size: 18px;
+
+    @include respond-to(xs) {
+      font-size: 15px;
+      padding: 10px 0px;
+    }
 
     &:hover {
       background-color: var(--secondary-color);
@@ -291,7 +401,17 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
 
-  
+  @include respond-to(xs) {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+
+  @include respond-to(sm) {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+
+  @include respond-to(lg) {
+    padding: 2rem;
+  }
   &:before {
     top: 0;
     position: absolute;

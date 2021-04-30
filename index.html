@@ -46,6 +46,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-red">
       <div class="container-fluid">
+        <div class="navbar-search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
         <a class="navbar-brand" href="#">
           <img src="assets/img/Logos/Logo-encuentro.png" alt="">
         </a>
@@ -53,7 +56,10 @@
           <img src="assets/img/Logos/Logo-los-Andes.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon">
+            <img src="assets/img/menu.png" alt="">
+          </span>
+        
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav ml-auto">
@@ -75,7 +81,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Dudas?</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="#">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </a>
@@ -133,7 +139,7 @@
                   <span>20 HRS /</span>
                   <span>Youtube live</span>
                 </div>
-                <div class="d-flex justify-content-end mt-4">
+                <div class="d-flex justify-content-center justify-content-md-end mt-2">
                   <a  class="btn-custom " href="">Inscribete aqui</a>
                 </div>
               </div>
@@ -169,7 +175,7 @@
                   <span>20 HRS /</span>
                   <span>Youtube live</span>
                 </div>
-                <div class="d-flex justify-content-end mt-4">
+                <div class="d-flex justify-content-end mt-2">
                   <a  class="btn-custom " href="">Inscribete aqui</a>
                 </div>
               </div>
@@ -202,7 +208,7 @@
         <div class="main-homeabout__item">
           <div class="main-homeabout__text">
             <p class="main-homeabout__description small">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vel ullam magni, ex atque veritatis pariatur dolorem officiis, ipsam blanditiis rerum est assumenda illum similique ducimus accusamus exercitationem doloribus voluptate. <strong><a href="">justo</a></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente consequuntur neque asperiores odit reiciendis atque sit odio temporibus perferendis, voluptatem earum dolores repudiandae aut culpa voluptates a, possimus reprehenderit.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vel ullam magni, ex atque veritatis pariatur dolorem officiis, ipsam blanditiis rerum est assumenda illum similique ducimus accusamus exercitationem doloribus voluptate. <strong><a href="">justo</a></strong> Lorem ipsumt reiciendis atque sit odio temporibus perferendis, voluptatem earum dolores repudiandae aut culpa voluptates a, possimus reprehenderit.
             </p>
             <div class="content-btn d-flex justify-content-end">
               <a class="btn-custom outline" href="">
@@ -218,9 +224,10 @@
 
     <!-- Featured -->
     <section class="main-featured">
+     
       <div class="main-featured__content">
         <div class="main-featured__item">
-          <h1  class="main-title__general title_lightred">Destacados</h1>
+          <h1  class="main-title__general title_lightred d-none d-md-block">Destacados</h1>
           <br>
           <div class="main-tags__text">
             <p>#Salud</p>
@@ -229,7 +236,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
           </h1>
           <div class="main-description__general">
-            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi saepe a pariatur facilis. In? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugit rerum dolor, tempore delectus quis! Exercitationem, at minima nobis corporis inventore, dolorum accusamus omnis enim sint a accusantium, eaque maiores.</p>
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi saepe a pariatur facilis. In? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugit rerum dolor, tempore delectus quis.</p>
           </div>
           <div class="main-author">
             <strong>Author:</strong>
@@ -240,7 +247,7 @@
             Leer mas
           </a>
           <div class="main-shared">
-            <span>Compartir:</span>
+            <span>Compartir</span>
             <ul>
               <li>
                 <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -249,18 +256,17 @@
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </li>
               <li>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </li>
+              <li>
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </li>
-              <li>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </li>
-              <li>
-                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-              </li>
+              
             </ul>
           </div>
         </div>
         <div class="main-featured__item">
+          <h1  class="main-title__general title_lightred d-md-none ">Destacados</h1>
           <div class="main-featured__img">
             <img src="assets/img/Home/featured.png" alt="">
           </div>
@@ -271,159 +277,276 @@
     <!-- Featured - Events -->
     <section class="main-homeevents">
       <h1  class="main-title__general title_lightblue">Eventos Destacados</h1>
-      <div class="main-homeevents__content main-slider3">
-        <div class="main-homeevents__item">
-          <div class="main-homeevents__card">
-            <div class="main-homeevents__img"> 
-              <img src="assets/img/Home/card.png" alt="">
-            </div>
-            <div class="main-homeevents__text">
-              <h2>Lorem ipsum dolor</h2>
-              <div class="main-description__general">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
-              </div>
-              <a class="btn-custom outline outline-dark" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Leer mas
-              </a>
 
-              <div class="main-shared">
-                <span>Compartir</span>
-                <ul>
-                  <li class="list__blue">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </li>
-                </ul>
+      <!-- Desktop - Slider -->
+      <div class="d-none d-md-block">
+
+        <div class="main-homeevents__content main-slider3 ">
+          <div class="main-homeevents__item">
+            <div class="main-homeevents__card">
+              <div class="main-homeevents__img"> 
+                <img src="assets/img/Home/card.png" alt="">
+              </div>
+              <div class="main-homeevents__text">
+                <h2>Lorem ipsum dolor</h2>
+                <div class="main-description__general">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+                </div>
+                <a class="btn-custom outline outline-dark" href="">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  Leer mas
+                </a>
+  
+                <div class="main-shared">
+                  <span>Compartir</span>
+                  <ul>
+                    <li class="list__blue">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-homeevents__item">
+            <div class="main-homeevents__card">
+              <div class="main-homeevents__img"> 
+                <img src="assets/img/Home/post1.png" alt="">
+              </div>
+              <div class="main-homeevents__text">
+                <h2>Lorem ipsum dolor</h2>
+                <div class="main-description__general">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+                </div>
+                <a class="btn-custom outline outline-dark" href="">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  Leer mas
+                </a>
+  
+                <div class="main-shared">
+                  <span>Compartir</span>
+                  <ul>
+                    <li class="list__blue">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-homeevents__item">
+            <div class="main-homeevents__card">
+              <div class="main-homeevents__img"> 
+                <img src="assets/img/Home/card2.png" alt="">
+              </div>
+              <div class="main-homeevents__text">
+                <h2>Lorem ipsum dolor</h2>
+                <div class="main-description__general">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+                </div>
+                <a class="btn-custom outline outline-dark" href="">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  Leer mas
+                </a>
+  
+                <div class="main-shared">
+                  <span>Compartir</span>
+                  <ul>
+                    <li class="list__blue">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-homeevents__item">
+            <div class="main-homeevents__card">
+              <div class="main-homeevents__img"> 
+                <img src="assets/img/Home/card.png" alt="">
+              </div>
+              <div class="main-homeevents__text">
+                <h2>Lorem ipsum dolor</h2>
+                <div class="main-description__general">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+                </div>
+                <a class="btn-custom outline outline-dark" href="">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  Leer mas
+                </a>
+  
+                <div class="main-shared">
+                  <span>Compartir</span>
+                  <ul>
+                    <li class="list__blue">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </li>
+                    
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="main-homeevents__item">
-          <div class="main-homeevents__card">
-            <div class="main-homeevents__img"> 
-              <img src="assets/img/Home/post1.png" alt="">
-            </div>
-            <div class="main-homeevents__text">
-              <h2>Lorem ipsum dolor</h2>
-              <div class="main-description__general">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
-              </div>
-              <a class="btn-custom outline outline-dark" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Leer mas
-              </a>
+      </div>
 
-              <div class="main-shared">
-                <span>Compartir</span>
-                <ul>
-                  <li class="list__blue">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </li>
-                </ul>
+      <!-- Mobile - cards -->
+      <div class="d-md-none">
+        <div class="main-homeevents__content">
+          <div class="main-homeevents__item">
+            <div class="main-homeevents__card">
+              <div class="main-homeevents__img"> 
+                <img src="assets/img/Home/card.png" alt="">
+              </div>
+              <div class="main-homeevents__text">
+                <h2>Lorem ipsum dolor</h2>
+                <div class="main-description__general">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+                </div>
+                <a class="btn-custom outline outline-dark" href="">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  Leer mas
+                </a>
+
+                <div class="main-shared">
+                  <span>Compartir</span>
+                  <ul>
+                    <li class="list__blue">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </li>
+                    
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="main-homeevents__item">
-          <div class="main-homeevents__card">
-            <div class="main-homeevents__img"> 
-              <img src="assets/img/Home/card2.png" alt="">
-            </div>
-            <div class="main-homeevents__text">
-              <h2>Lorem ipsum dolor</h2>
-              <div class="main-description__general">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+          <div class="main-homeevents__item">
+            <div class="main-homeevents__card">
+              <div class="main-homeevents__img"> 
+                <img src="assets/img/Home/post1.png" alt="">
               </div>
-              <a class="btn-custom outline outline-dark" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Leer mas
-              </a>
+              <div class="main-homeevents__text">
+                <h2>Lorem ipsum dolor</h2>
+                <div class="main-description__general">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+                </div>
+                <a class="btn-custom outline outline-dark" href="">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  Leer mas
+                </a>
 
-              <div class="main-shared">
-                <span>Compartir</span>
-                <ul>
-                  <li class="list__blue">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </li>
-                </ul>
+                <div class="main-shared">
+                  <span>Compartir</span>
+                  <ul>
+                    <li class="list__blue">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </li>
+                    
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="main-homeevents__item">
-          <div class="main-homeevents__card">
-            <div class="main-homeevents__img"> 
-              <img src="assets/img/Home/card.png" alt="">
-            </div>
-            <div class="main-homeevents__text">
-              <h2>Lorem ipsum dolor</h2>
-              <div class="main-description__general">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+          <div class="main-homeevents__item">
+            <div class="main-homeevents__card">
+              <div class="main-homeevents__img"> 
+                <img src="assets/img/Home/card2.png" alt="">
               </div>
-              <a class="btn-custom outline outline-dark" href="">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                Leer mas
-              </a>
+              <div class="main-homeevents__text">
+                <h2>Lorem ipsum dolor</h2>
+                <div class="main-description__general">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed iure perspiciatis praesentium id eveniet asperiores magnam blanditiis similique?</p>
+                </div>
+                <a class="btn-custom outline outline-dark" href="">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  Leer mas
+                </a>
 
-              <div class="main-shared">
-                <span>Compartir</span>
-                <ul>
-                  <li class="list__blue">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </li>
-                  <li class="list__blue">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </li>
-                </ul>
+                <div class="main-shared">
+                  <span>Compartir</span>
+                  <ul>
+                    <li class="list__blue">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </li>
+                    <li class="list__blue">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </li>
+                    
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+          
+         
         </div>
+        <a class="btn-custom outline outline-bluedark d-flex justify-content-center" href="">
+          <i class="fa fa-plus mr-4" aria-hidden="true"></i>
+          Cargar mas eventos
+        </a>
       </div>
     </section>
 
@@ -431,111 +554,181 @@
     <section class="main-homepost">
       <div class="main-homepost__general ">
         <h1  class="main-title__general title_lightred">Noticias Relacionadas</h1>
-        <div class="main-homepost__content">
-          <div class="main-homepost__item">
-            <div class="content-grid2">
-              <div class="main-homepost__img"> 
-                <img src="assets/img/Home/post2.png" alt="">
-              </div>
-              <div class="main-homepost__text">
-                <div class="main-counter">
-                  <div class="main-counter__content">
-                    <span><strong>1</strong></span>
-                    <span>/</span>
-                    <span>3</span>
+         <!-- Desktop - Slider -->
+        <div class="d-none d-sm-block">
+          <div class="main-homepost__content main-slider1">
+            <div class="main-homepost__item">
+              <div class="content-grid2">
+                <div class="main-homepost__img"> 
+                  <img src="assets/img/Home/post2.png" alt="">
+                </div>
+                <div class="main-homepost__text">
+                  <div class="main-counter">
+                    <div class="main-counter__content">
+                      <span><strong>1</strong></span>
+                      <span>/</span>
+                      <span>3</span>
+                    </div>
                   </div>
-                </div>
-                <h1 class="main-title__small title-small__dark">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
-                </h1>
-                <div class="main-description__general">
-                  <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
-                </div>
-                <a class="btn-custom outline outline-dark" href="">
-                  <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  Leer mas
-                </a>
-                <div class="main-shared">
-                  <span>Compartir:</span>
-                  <ul>
-                    <li>
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    </li>
-                  </ul>
+                  <h1 class="main-title__small title-small__dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                  </h1>
+                  <div class="main-description__general">
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
+                  </div>
+                  <a class="btn-custom outline outline-dark" href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Leer mas
+                  </a>
+                  <div class="main-shared">
+                    <span>Compartir:</span>
+                    <ul>
+                      <li>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                      </li>
+                  
+                      <li>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="main-homepost__item">
-            <div class="content-grid2">
-              <div class="main-homepost__img"> 
-                <img src="assets/img/Home/post1.png" alt="">
-              </div>
-              <div class="main-homepost__text">
-                <div class="main-counter">
-                  <div class="main-counter__content">
-                    <span><strong>1</strong></span>
-                    <span>/</span>
-                    <span>3</span>
+            <div class="main-homepost__item">
+              <div class="content-grid2">
+                <div class="main-homepost__img"> 
+                  <img src="assets/img/Home/post1.png" alt="">
+                </div>
+                <div class="main-homepost__text">
+                  <div class="main-counter">
+                    <div class="main-counter__content">
+                      <span><strong>1</strong></span>
+                      <span>/</span>
+                      <span>3</span>
+                    </div>
                   </div>
-                </div>
-                <h1 class="main-title__small title-small__dark">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
-                </h1>
-                <div class="main-description__general">
-                  <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
-                </div>
-                <a class="btn-custom outline outline-dark" href="">
-                  <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  Leer mas
-                </a>
-                <div class="main-shared">
-                  <span>Compartir:</span>
-                  <ul>
-                    <li>
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    </li>
-                  </ul>
+                  <h1 class="main-title__small title-small__dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                  </h1>
+                  <div class="main-description__general">
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
+                  </div>
+                  <a class="btn-custom outline outline-dark" href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Leer mas
+                  </a>
+                  <div class="main-shared">
+                    <span>Compartir:</span>
+                    <ul>
+                      <li>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                      </li>
+                  
+                      <li>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Mobile - cards -->
+        <div class="d-sm-none">
+          <div class="main-homepost__content ">
+            <div class="main-homepost__item"> 
+              <div class="content-grid2">
+                <div class="main-homepost__img"> 
+                  <img src="assets/img/Home/post2.png" alt="">
+                </div>
+                <div class="main-homepost__text">          
+                  <h1 class="main-title__small title-small__dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                  </h1>
+                  <div class="main-description__general">
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
+                  </div>
+                  <div class="main-shared">
+                    <span>Compartir:</span>
+                    <ul>
+                      <li>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                      </li>
+                  
+                      <li>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <!-- Mini related -->
+            <div class="main-minirelated">
+              <div class="main-minicard">
+                <div class="main-minicard__img">
+                  <img src="assets/img/Home/post1.png" alt="">
+                </div>
+                <div class="main-minicard__text">
+                  <div class="main-minicard__title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                  <a class="btn-custom outline outline-dark" href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Leer mas
+                  </a>
+                </div>
+              </div>
+              <div class="main-minicard">
+                <div class="main-minicard__img">
+                  <img src="assets/img/Home/post1.png" alt="">
+                </div>
+                <div class="main-minicard__text">
+                  <div class="main-minicard__title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                  <a class="btn-custom outline outline-dark" href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Leer mas
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
     <!-- Line -->
-    <div class="main-line">
+    <div class="main-line d-none d-md-block">
       <hr>
     </div>
     <!-- Quick access -->
 
-    <section class="main-access">
+    <section class="main-access ">
       <h1  class="main-title__general title_lightred">Accesos Rápidos</h1>
       <div class="main-access__content">
         <ul>
@@ -587,7 +780,7 @@
           </div>
         
         </div>
-        <div class="main-shared ">
+        <div class="main-shared d-none d-md-block ">
           <ul>
             <li class="list__footer">
               <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -645,6 +838,26 @@
               <i class="fa fa-angle-right" aria-hidden="true"></i>
               Dudas?
             </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-shared d-md-none ">
+        <ul>
+          <li class="list__footer">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </li>
+          <li class="list__footer">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </li>
+          <li class="list__footer">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </li>
+          <li class="list__footer">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </li>
+          <li class="list__footer">
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
           </li>
         </ul>
       </div>

@@ -43,71 +43,77 @@
       </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-red">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="assets/img/Logos/Logo-encuentro.png" alt="">
-        </a>
-        <a class="navbar-brand" href="#">
-          <img src="assets/img/Logos/Logo-los-Andes.png" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Encuentros?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">#Sociedad</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">#Salud</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">#Innovacion</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">#Encuestas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Dudas?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <div class="theme-switch-wrapper">
-                  <label class="theme-switch" for="checkbox">
-                  <input type="checkbox" id="checkbox" />
-                  <div class="slider round"></div>
-                </label>
-                </div>
-            
-              </a>
-            </li>
-          </ul>
-        </div>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg bg-red">
+    <div class="container-fluid">
+      <div class="navbar-search">
+        <i class="fa fa-search" aria-hidden="true"></i>
       </div>
-    </nav>
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/Logos/Logo-encuentro.png" alt="">
+      </a>
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/Logos/Logo-los-Andes.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <img src="assets/img/menu.png" alt="">
+        </span>
+      
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="encuentros.html">Encuentros?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#Sociedad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#Salud</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#Innovacion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#Encuestas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dudas?</a>
+          </li>
+          <li class="nav-item d-none d-md-block">
+            <a class="nav-link" href="#">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+              </label>
+              </div>
+          
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     <!-- Banner -->
-    <div class="mini-banner">
+    <div class="mini-banner main-header__heigth">
       <div class="mini-banner__content">
         <div class="mini-banner__item">
           <div class="mini-banner__grid ">
             <div class="mini-banner__text">
-              <h1  class="main-title__general title_lightred">Encuentos anteriores</h1>
+              <h1  class="main-title__general title_lightred title__alignleft ">Encuentos anteriores</h1>
 
               <div class="main-description__general">
                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi saepe a pariatur facilis.</p>
@@ -127,6 +133,13 @@
       <div class="main-tabs__content">
         <div class="main-tabs__primary">
 
+          <div class="main-btn__offcanvas">
+            <p >Filtar por categoria</p>
+            <button>
+              <img src="assets/img/selec-menu.png" alt="">
+            </button>
+          </div>
+
           <ul class="nav nav-pills " id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Sociedad</button>
@@ -138,6 +151,8 @@
               <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Innovacion</button>
             </li>
           </ul>
+        
+          
         </div>
 
         <div class="tab-content" id="pills-tabContent">
@@ -147,7 +162,7 @@
                 <div class="main-cardtabs">
                 <div class="main-cardtabs__text">
                   <h1 class="main-title__small title-small__dark">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                    1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
                   </h1>
                   <div class="main-description__general">
                     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
@@ -248,7 +263,7 @@
                 <div class="main-cardtabs">
                 <div class="main-cardtabs__text">
                   <h1 class="main-title__small title-small__dark">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                    2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
                   </h1>
                   <div class="main-description__general">
                     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
@@ -420,115 +435,186 @@
     </section>
 
 
+
     <!-- Related news -->
     <section class="main-homepost">
       <div class="main-homepost__general ">
         <h1  class="main-title__general title_lightred">Noticias Relacionadas</h1>
-        <div class="main-homepost__content">
-          <div class="main-homepost__item">
-            <div class="content-grid2">
-              <div class="main-homepost__img"> 
-                <img src="assets/img/Home/post2.png" alt="">
-              </div>
-              <div class="main-homepost__text">
-                <div class="main-counter">
-                  <div class="main-counter__content">
-                    <span><strong>1</strong></span>
-                    <span>/</span>
-                    <span>3</span>
+         <!-- Desktop - Slider -->
+        <div class="d-none d-sm-block">
+          <div class="main-homepost__content main-slider1">
+            <div class="main-homepost__item">
+              <div class="content-grid2">
+                <div class="main-homepost__img"> 
+                  <img src="assets/img/Home/post2.png" alt="">
+                </div>
+                <div class="main-homepost__text">
+                  <div class="main-counter">
+                    <div class="main-counter__content">
+                      <span><strong>1</strong></span>
+                      <span>/</span>
+                      <span>3</span>
+                    </div>
                   </div>
-                </div>
-                <h1 class="main-title__small title-small__dark">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
-                </h1>
-                <div class="main-description__general">
-                  <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
-                </div>
-                <a class="btn-custom outline outline-dark" href="">
-                  <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  Leer mas
-                </a>
-                <div class="main-shared">
-                  <span>Compartir:</span>
-                  <ul>
-                    <li>
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    </li>
-                  </ul>
+                  <h1 class="main-title__small title-small__dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                  </h1>
+                  <div class="main-description__general">
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
+                  </div>
+                  <a class="btn-custom outline outline-dark" href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Leer mas
+                  </a>
+                  <div class="main-shared">
+                    <span>Compartir:</span>
+                    <ul>
+                      <li>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                      </li>
+                  
+                      <li>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="main-homepost__item">
-            <div class="content-grid2">
-              <div class="main-homepost__img"> 
-                <img src="assets/img/Home/post1.png" alt="">
-              </div>
-              <div class="main-homepost__text">
-                <div class="main-counter">
-                  <div class="main-counter__content">
-                    <span><strong>1</strong></span>
-                    <span>/</span>
-                    <span>3</span>
+            <div class="main-homepost__item">
+              <div class="content-grid2">
+                <div class="main-homepost__img"> 
+                  <img src="assets/img/Home/post1.png" alt="">
+                </div>
+                <div class="main-homepost__text">
+                  <div class="main-counter">
+                    <div class="main-counter__content">
+                      <span><strong>1</strong></span>
+                      <span>/</span>
+                      <span>3</span>
+                    </div>
                   </div>
-                </div>
-                <h1 class="main-title__small title-small__dark">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
-                </h1>
-                <div class="main-description__general">
-                  <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
-                </div>
-                <a class="btn-custom outline outline-dark" href="">
-                  <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  Leer mas
-                </a>
-                <div class="main-shared">
-                  <span>Compartir:</span>
-                  <ul>
-                    <li>
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    </li>
-                  </ul>
+                  <h1 class="main-title__small title-small__dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                  </h1>
+                  <div class="main-description__general">
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
+                  </div>
+                  <a class="btn-custom outline outline-dark" href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Leer mas
+                  </a>
+                  <div class="main-shared">
+                    <span>Compartir:</span>
+                    <ul>
+                      <li>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                      </li>
+                  
+                      <li>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Mobile - cards -->
+        <div class="d-sm-none">
+          <div class="main-homepost__content ">
+            <div class="main-homepost__item"> 
+              <div class="content-grid2">
+                <div class="main-homepost__img"> 
+                  <img src="assets/img/Home/post2.png" alt="">
+                </div>
+                <div class="main-homepost__text">          
+                  <h1 class="main-title__small title-small__dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni non, facilis vitae
+                  </h1>
+                  <div class="main-description__general">
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga libero voluptatum neque sapiente, vero possimus inventore ipsam nisi consectetur quaerat distinctio laboriosam numquam commodi.</p>
+                  </div>
+                  <div class="main-shared">
+                    <span>Compartir:</span>
+                    <ul>
+                      <li>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                      </li>
+                  
+                      <li>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <!-- Mini related -->
+            <div class="main-minirelated">
+              <div class="main-minicard">
+                <div class="main-minicard__img">
+                  <img src="assets/img/Home/post1.png" alt="">
+                </div>
+                <div class="main-minicard__text">
+                  <div class="main-minicard__title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                  <a class="btn-custom outline outline-dark" href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Leer mas
+                  </a>
+                </div>
+              </div>
+              <div class="main-minicard">
+                <div class="main-minicard__img">
+                  <img src="assets/img/Home/post1.png" alt="">
+                </div>
+                <div class="main-minicard__text">
+                  <div class="main-minicard__title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                  <a class="btn-custom outline outline-dark" href="">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Leer mas
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
     <!-- Line -->
-    <div class="main-line">
+    <div class="main-line d-none d-md-block">
       <hr>
     </div>
     <!-- Quick access -->
 
-    <section class="main-access">
+    <section class="main-access ">
       <h1  class="main-title__general title_lightred">Accesos Rápidos</h1>
       <div class="main-access__content">
         <ul>
@@ -580,7 +666,7 @@
           </div>
         
         </div>
-        <div class="main-shared">
+        <div class="main-shared d-none d-md-block ">
           <ul>
             <li class="list__footer">
               <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -641,8 +727,29 @@
           </li>
         </ul>
       </div>
+
+      <div class="main-shared d-md-none ">
+        <ul>
+          <li class="list__footer">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </li>
+          <li class="list__footer">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </li>
+          <li class="list__footer">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </li>
+          <li class="list__footer">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </li>
+          <li class="list__footer">
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </div>
     </footer>
   </div>
+
   <script src='https://use.fontawesome.com/70a3cb5d53.js'></script>
   <script src='assets/js/jquery.min.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js'></script>
